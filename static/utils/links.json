@@ -1,0 +1,43 @@
+{
+    "main": [
+        {
+            "href": "intro",
+            "label": "Intro",
+            "pageTitle": "Introduction"
+        },
+        {
+            "href": "set-up",
+            "label": "The Setup",
+            "pageTitle": "The Setup"
+        },
+        {
+            "href": "ops",
+            "label": "Operations",
+            "pageTitle": "Operations"
+        },
+        {
+            "href": "engineering",
+            "label": "Engineering",
+            "pageTitle": "Engineering"
+        },
+        {
+            "href": "devops",
+            "label": "DevOps",
+            "pageTitle": "DevOps"
+        },
+        {
+            "href": "info-media",
+            "label": "Cloud Info Media",
+            "pageTitle": "Info Media"
+        },
+        {
+            "href": "declaration",
+            "label": "Declaration",
+            "pageTitle": "Declaration"
+        }
+    ],
+    "nonNavLinks":[
+        {"href":"logged-out","label":"Logged Out","pageTitle":"Manifesto"},
+        {"href":"","label":"Manifesto","pageTitle":"Manifesto"}
+    ]
+}

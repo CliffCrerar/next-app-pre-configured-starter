@@ -1,0 +1,47 @@
+/**
+ * Pages parent container
+ */
+import React from 'react'
+import App from 'next/app'
+import LayOut from 'components/layout'
+import cookies from 'js-cookie'
+import { withRouter } from 'next/router'
+class MyApp extends App {
+  pageText = require('static/pageText.json');
+  conf = require('config').Config;
+  
+  
+
+  constructor(){
+    super()
+    console.log('pageConfig: ', this.conf);
+  }
+  componentDidMount() {
+    console.log('APP DID MOUNT');
+    this.paragraphStart(); 
+  }
+  paragraphStart() {
+    if (process.browser) {
+      const paragraphs = document.getElementsByClassName('caps-start')
+      for (let i = 0; i < paragraphs.length; i++) {
+        let e = paragraphs[i];
+        let text = e.innerHTML;
+        let firstLetter = text.substring(0, 1);
+        e.innerHTML = `<span class="big-Start">${firstLetter}</span>${text.substring(1, text.length).trim()}`
+      }
+    }
+  }
+  render() {
+    const { Component, pageProps } = this.props
+    // pageProps.concat(this.Config);
+    pageProps.conf = this.conf
+    console.log('pageProps: ', pageProps);
+    console.log('Component: ', Component);
+    return (
+      <LayOut conf={this.conf}>
+        <Component pageText={this.pageText} {...pageProps} />
+      </LayOut>)
+  }
+}
+
+export default withRouter(MyApp);
