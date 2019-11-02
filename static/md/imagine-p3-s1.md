@@ -1,8 +1,9 @@
-# Business infrastructure 
+# Snebe fractura
 
 ---
 
-Although a fully cloud based solution is well within the realms of possibility there is still a a degree of physical hardware required, minimally productivity devices (laptops or desktops) and a connection to the internet. Decisions, for on premise infrastructure and infrastructure as a service (IaaS) will be based on access, nature of operations, place of business and the services included in the lease agreement of office space.
+Quam temere in vitiis, legem sancimus haerentia. Cum sociis natoque penatibus et magnis dis parturient. Fictum, deserunt mollit anim laborum astutumque! Quae vero auctorem tractata ab fiducia dicuntur.
+Hi omnes lingua, institutis, legibus inter se differunt. Ut enim ad minim veniam, quis nostrud exercitation. Ullamco laboris nisi ut aliquid ex ea commodi consequat. Qui ipsorum lingua Celtae, nostra Galli appellantur. Mercedem aut nummos unde unde extricat, amaras.
 
 ---
 

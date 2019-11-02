@@ -2,7 +2,7 @@
 
 ---
 
-> This page was just added as a nice to have, AWS have really short and interesting videos that describe their services.
+> AWS service video mix tape page
 
 ## AWS Cloud Infra structure
 

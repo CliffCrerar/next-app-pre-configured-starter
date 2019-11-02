@@ -2,27 +2,32 @@
 >
 >  ---
 >
->  I, Clifford Crerar hereby swear that what is encapsulated in this document is from experience as a architect, technologist and dev. Together with knowledge gained by academic studies and a appetite to know and understand technology and practices associated with the field. I did not compose this document by googling what is a CTO, albeit google in the past has assisted me by means of other developers past experience to solve problems, like a lawyer would read case studies to build a case. 
+>  Quisque placerat facilisis egestas cillum dolore. Cum sociis natoque penatibus et magnis dis parturient. Unam incolunt Belgae, aliam Aquitani, tertiam.
+Ullamco laboris nisi ut aliquid ex ea commodi consequat. Curabitur blandit tempus ardua ridiculus sed magna. Mercedem aut nummos unde unde extricat, amaras. Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Curabitur est gravida et libero vitae dictum. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh.
+Pellentesque habitant morbi tristique senectus et netus. Quo usque tandem abutere, Catilina, patientia nostra? Quam temere in vitiis, legem sancimus haerentia. Me non paenitet nullum festiviorem excogitasse ad hoc.
+Cum ceteris in veneratione tui montes, nascetur mus. Gallia est omnis divisa in partes tres, quarum. Nihil hic munitissimus. Cras mattis iudicium purus sit amet fermentum. Morbi fringilla convallis sapien, id pulvinar odio volutpat. 
 >
->  How I keep my skills as sharp is:
+>  habendi senatus locus, nihil horum?
 >
->  - by reading articles from Medium, Hackernoon and Hasnode, 
->
->  - by answering questions on Quora, 
->
+>  Paullum deliquit, ponderibus modulisque suis ratio utitur. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Quis aute iure reprehenderit in voluptate velit esse. Magna pars studiorum, prodita quaerimus. Praeterea iter est quasdam res quas ex communi.
 >  - by Reading and referring to technical documentation like on [Angular.io](www.angular.io), [Reactjs](https://reactjs.org/) and [RXJS](rxjs-dev.firebaseapp.com) to learn how to use new tools and functionalities about the framworks I use.
 >
->  - by flexing my coding skills on hacker rank,
+>  - blegem sancimus haerentia,
 >
->  - and by learning about software engineering, interaction design and software project management
+>  - Cum sociis natoque penatibus et magnis dis parturient.
 >
->  This is where my skills, knowledge and much of my experience comes from before I work my 8 to nth hour day as a software developer. I also hope this gives you a good idea about my work ethic and dedication to adding value to a company that values my participation. Give me a purpose and I will make you famous.
+>  Inmensae subtilitatis, obscuris et malesuada fames. Contra legem facit qui id facit quod lex prohibet. Quis aute iure reprehenderit in voluptate velit esse. Pellentesque habitant morbi tristique senectus et netus. Hi omnes lingua, institutis, legibus inter se differunt.
+At nos hinc posthac, sitientis piros Afros. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Unam incolunt Belgae, aliam Aquitani, tertiam.
+Paullum deliquit, ponderibus modulisque suis ratio utitur. Sed haec quis possit intrepidus aestimare tellus. Cum sociis natoque penatibus et magnis dis parturient. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras.
 
-# Conclusions
+# Einde is nou hoer
 
 ---
 
-If you decide to hire me what you can expect is diligence, ethics and integrity, dedication to learning new things and the use of the most modern technology. I will always strive to ensure I understand as well as be commited to ensuring the business gets and keeps the competative advantage and a healthy bottom line.
+At nos hinc posthac, sitientis piros Afros. Unam incolunt Belgae, aliam Aquitani, tertiam. Quis aute iure reprehenderit in voluptate velit esse. Plura mihi bona sunt, inclinet, amari petere vellent.
+Mercedem aut nummos unde unde extricat, amaras. Quam diu etiam furor iste tuus nos eludet? Sed haec quis possit intrepidus aestimare tellus.
+
+Pellentesque habitant morbi tristique senectus et netus. Tityre, tu patulae recubans sub tegmine fagi dolor. Ullamco laboris nisi ut aliquid ex ea commodi consequat. Quid securi etiam tamquam eu fugiat nulla pariatur. Magna pars studiorum, prodita quaerimus. Excepteur sint obcaecat cupiditat non proident culpa.
 
 ---
 
@@ -32,11 +37,9 @@ If you decide to hire me what you can expect is diligence, ethics and integrity,
 
 ---
 
-Site Author: ***[Clifford Crerar](www.cliff-crerar.tech)*** {style="text-align: center"}
+Site Author: ***[Janneman Naidoo](www.cliff-crerar.tech)*** {style="text-align: center"}
 
 ---
-
-
 
 # Technologies used in the production of this site:
 

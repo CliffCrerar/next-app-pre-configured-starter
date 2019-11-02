@@ -1,15 +1,18 @@
-> It is noteworthy that the opportunity of applying IaaS considerably reduces the risk of availability, safegaurding of assets, loss of data and need to implement disaster recovery measures, in contrast recklessness in the application thereof could have a dire impact on capital.
+> Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras.
 
 ## About Cloud Networking
 
 ---
 
-- a Virtual network by default provides strong security.
-- Static IP (internet protocol) addresses are available on request, you only pay for static IP's **NOT** in use. (Static IP's are required for hosting online assets like websites / applications etc.)
-- As you will see in the cloud architecture diagram above, the VPC (Virtual private cloud network) is divided up into subnets. Subnets seperates the publicly accessed network from the intranet, in this example, employee access a stricter governed subnet that is seperate, albeit connected, the access to the "internal subnet" will be stricter than the access to the public subnet.
-- The cloud architecture diagram has support in its own subnet, to seperate all the concerns, subnets generally available at additional cost.
-- For productivity users will access [worspaces](#workspaces) as Desktop as as service (DaaS) located behind a security group and accessed via [single sign (SSO)](#singe-sign-on) on credentials provided via a cloud directory service.
-- Access to any virtual servers can be restricted per IP address, these are mere IP filters. For AWS EC2 servers can only be accessed if you have a security key (asymetric encryption). Google is much more relaxed on this front. As for Azure I have only used serverless in that cloud.
+Quisque placerat facilisis egestas cillum dolore. 
+- Morbi odio eros, 
+- volutpat ut pharetra vitae, 
+- lobortis sed nibh. 
+- Unam incolunt Belgae, 
+- aliam Aquitani, tertiam. 
+- Cum sociis natoque penatibus et magnis dis parturient. 
+- Paullum deliquit, 
+- ponderibus modulisque suis ratio utitur.
 
 {class="rn-list"}
 
@@ -21,37 +24,33 @@
 
 ---
 
-## Operations and policies {class="align-left"}
+## Operata za papier {class="align-left"}
 
 ---
 
-As the business grows various roles will be established, employees almost at all levels require access to proctivity applications which are usually at least Microsoft's products like word, excel and powerpoint. Although there are other, arguably better options available; Microsoft productivity applications are an institution. 
+Prima luce, cum quibus mons aliud consensu ab eo. Nec dubitamus multa iter quae et nos invenerat. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Curabitur est gravida et libero vitae dictum. A communi observantia non est recedendum.
+Petierunt uti sibi concilium totius Galliae in diem certam indicere. Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+Cum ceteris in veneratione tui montes, nascetur mus. Ambitioni dedisse scripsisse iudicaretur. Contra legem facit qui id facit quod lex prohibet. Gallia est omnis divisa in partes tres, quarum. Quisque placerat facilisis egestas cillum dolore.
+Quis aute iure reprehenderit in voluptate velit esse. Pellentesque habitant morbi tristique senectus et netus. Me non paenitet nullum festiviorem excogitasse ad hoc.
 
-Expecting employees to use alternatives could have an impact on morale. In my experience the most effective plug for this gap would be to acquire a office 365 license per employee thereby access to the desired productivity applications by default, and cloud space. That being said, desktop as a service could  resolve this problem.
-
-Policies would typically be related to acceptable use and the protection of the firms intellectual property. 
-
-## The role of technology and social media related to marketing strategy.
-
----
-
-This mainly involves the companie's strategic position in terms of social media, and because the company will start with minimal staff, I can volunteer in this area. The idea is not so much about selling as it is about awareness and a strong presence online. That being said, very much a role involving colaboration with sales. 
-
-Setting up the correct social media pages, registering the business with the right portals, like google business, linkedIn companies etc. Publishing information sites, email campaigns and the right tech for the job, conducting webinars, availing all kinds of online content. 
-
-Publishing privacy policies, terms of use, disclaimers. Implementing controls to receive notifications when someone mentions the company. Managing the companie's reputation online. Applying search engine optimisation and automating social media posts to increase **SEO**. Analysing the results of campaigns to launch more effective campaigns. 
-
-Attempt to get users attention by the possibility of an incentive, so to drop cookies in the right place.  User profiling to better understand the target market. Finding software to manage all of this centrally, (A package I know of named Pardot is extremely effective, also has a hefty price tag.)
-
-# Support 
+## Sambuka vodka tequila brandewyn
 
 ---
 
-From a perspective of Chief Technology Officer there are two distinct groups of user that will require support. The **consumer** of the product / software and the **employees** of the business. The support required here will have different objectives that must be considered.
+Inmensae subtilitatis, obscuris et malesuada fames. Unam incolunt Belgae, aliam Aquitani, tertiam. Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras.
+Quae vero auctorem tractata ab fiducia dicuntur. Quis aute iure reprehenderit in voluptate velit esse. Praeterea iter est quasdam res quas ex communi.
+Non equidem invideo, miror magis posuere velit aliquet. Phasellus laoreet lorem vel dolor tempus vehicula. Plura mihi bona sunt, inclinet, amari petere vellent. Fabio vel iudice vincam, sunt in culpa qui officia. Curabitur est gravida et libero vitae dictum. Qui ipsorum lingua Celtae, nostra Galli appellantur.
+Cum sociis natoque penatibus et magnis dis parturient. Tu quoque, Brute, fili mi, nihil timor populi, nihil! Hi omnes lingua, institutis, legibus inter se differunt. Idque Caesaris facere voluntate liceret: sese habere. Ab illo tempore, ab est sed immemorabili.
+Nihil hic munitissimus habendi senatus locus, nihil horum? Donec sed odio operae, eu vulputate felis rhoncus. Me non paenitet nullum festiviorem excogitasse ad hoc. Gallia est omnis divisa in partes tres, quarum. Prima luce, cum quibus mons aliud consensu ab eo. Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
+
+# Bier 
 
 ---
 
+Magna pars studiorum, prodita quaerimus. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Nihilne te nocturnum praesidium Palati, nihil urbis ***vigiliae***. Cum ceteris in veneratione tui montes, nascetur mus. Hi omnes lingua, ***institutis***, legibus inter se differunt. Curabitur est gravida et libero vitae dictum.
+Etiam habebis sem dicantur magna mollis euismod. Unam incolunt Belgae, aliam Aquitani, tertiam. Gallia est omnis divisa in partes tres, quarum. Praeterea iter est quasdam res quas ex communi.
 
+---
 
 <div>
 	<img class="img-fluid" src="static/img/tech-support.jpg" alt="tech-support">  
@@ -61,24 +60,31 @@ From a perspective of Chief Technology Officer there are two distinct groups of 
 
 ---
 
-Did you turn it off and on? The days it being the fix for everything are long gone, still an effective solution to many device problems (Joking aside). Users are become smarter, users that work in offices are by default knowledge workers, often can troubleshoot their own problems. That being said I worked in dev teams, so maybe not a fair assumption. But still as long as offices are at a single premise and employee count less than twenty, it will be a one man show.
+Nihil hic munitissimus habendi senatus locus, nihil horum? Magna pars studiorum, prodita quaerimus. A communi observantia non est recedendum.
+Nec dubitamus multa iter quae et nos invenerat. Quid securi etiam tamquam eu fugiat nulla pariatur. Qui ipsorum lingua Celtae, nostra Galli appellantur. Fictum, deserunt mollit anim laborum astutumque! Paullum deliquit, ponderibus modulisque suis ratio utitur.
+Donec sed odio operae, eu vulputate felis rhoncus. At nos hinc posthac, sitientis piros Afros. Tityre, tu patulae recubans sub tegmine fagi dolor. Ambitioni dedisse scripsisse iudicaretur.
+Quam diu etiam furor iste tuus nos eludet? Tu quoque, Brute, fili mi, nihil timor populi, nihil! Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.
 
-## Customers / Users 
-
----
-
-This however may definitly not be a one man show, but it will be a show of user support automation. Cloud services offer [Machine Learning as a Service (MLaaS)](#Machine-learning-powering-business). Machines already having some degree of training. I pick up where the cloud developers left off and teach it to handle and resolve user queries. Queries it can't resolve are forwarded to me, once resolved, the support bot receives some training and in future should be able to resolve a similar case on its own. The nature of ML is also an evolution. The more queries it handles the faster it learns. 
-
-It will require a ticketing system to integrate with the support bot and carefully monitored to determine the effectiveness and efficiency. This also very much in the realm of possibility. An example of such a system currently is [Intercom](https://www.intercom.com/dr/sponsor-biz?utm_source=google&utm_medium=sem&utm_campaign=2047452426&utm_term=intercom&utm_ad_collection=79229079744&_bt=385151934172&_bg=79229079744&utm_ad=385151934172&offer=sponsoredbybiz&utm_campaign_name=go_evg_acq_trial_b-a-rlsa_generic_bld_row_en&utm_ad_collection_name=gen-p_intercom&utm_ad_name=sponsoredbybiz_text_20q3&gclid=Cj0KCQjwoqDtBRD-ARIsAL4pviBLYAVRsYpQrRaJvrb-A06L7gEE98NohktV9dVlY07_GQsh_cKCjg0aAm0REALw_wcB).
-
-# Disaster Recovery
+## Cartrate / Testuras
 
 ---
 
-It is difficult to say not knowing what the technology stack would be. Reliance on mainly Iaas and PaaS makes it very easy to implement and automate efficiently while eliminating a considerable amount of risk in the process. 
+Quam diu etiam furor iste tuus nos eludet? Qui ipsorum lingua Celtae, nostra Galli appellantur. Tu quoque, Brute, fili mi, nihil timor populi, nihil! Prima luce, cum quibus mons aliud consensu ab eo.
+Contra legem facit qui id facit quod lex prohibet. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Quid securi etiam tamquam eu fugiat nulla pariatur. Quis aute iure reprehenderit in voluptate velit esse. Inmensae subtilitatis, obscuris et malesuada fames. Curabitur blandit tempus ardua ridiculus sed magna. [Machine Learning as a Service (MLaaS)](#Machine-learning-powering-business).
+A communi observantia non est recedendum. Tityre, tu patulae recubans sub tegmine fagi dolor. Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae. Quam temere in vitiis, legem sancimus haerentia.
+Gallia est omnis divisa in partes tres, quarum. Nihil hic munitissimus habendi senatus locus, nihil horum? Curabitur est gravida et libero vitae dictum. Praeterea iter est quasdam res quas ex communi. Phasellus laoreet lorem vel dolor tempus vehicula. Cras mattis iudicium purus sit amet fermentum.
+Cum ceteris in veneratione tui montes, nascetur mus. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Morbi fringilla convallis sapien, id pulvinar odio volutpat. Sed haec quis possit intrepidus aestimare tellus.
 
-User desktops will be templates and from my experience will only be disrupted by a break in connection to the internet. Using cloud directory services along with single sign on means that users will have one set of credentials to access everything, adding two factor authentication to the mix means that if a troll acquires credentials it is worthless if he does not have access to a users smart device. Furthermore, workspaces can be supplemented by workdocs. 
+[Intercom](https://www.intercom.com/dr/sponsor-biz?utm_source=google&utm_medium=sem&utm_campaign=2047452426&utm_term=intercom&utm_ad_collection=79229079744&_bt=385151934172&_bg=79229079744&utm_ad=385151934172&offer=sponsoredbybiz&utm_campaign_name=go_evg_acq_trial_b-a-rlsa_generic_bld_row_en&utm_ad_collection_name=gen-p_intercom&utm_ad_name=sponsoredbybiz_text_20q3&gclid=Cj0KCQjwoqDtBRD-ARIsAL4pviBLYAVRsYpQrRaJvrb-A06L7gEE98NohktV9dVlY07_GQsh_cKCjg0aAm0REALw_wcB).
 
-This is agreat solution because it uses storage that is version aware, unlike windows NTFS file system from windows and HPFS on a Mac. Cloud storage block allows you to see what was in your excel spreadsheet last week, last month, last year. To setup disaster recovery is as easy as buying ice-cream.
+It will require a ticketing system to integrate with the support bot and carefully monitored to determine the effectiveness and efficiency. This also very much in the realm of possibility. An example of such a system currently is 
 
-I will not elaborate further on this topic as it only becomes a serious discussion for on premise hardware and file storage.
+# Disasta covrero
+
+---
+
+Curabitur blandit tempus ardua ridiculus sed magna. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Tu quoque, Brute, fili mi, nihil timor populi, nihil! Contra legem facit qui id facit quod lex prohibet. Non equidem invideo, miror magis posuere velit aliquet.
+Ab illo tempore, ab est sed immemorabili. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Magna pars studiorum, prodita quaerimus. Ambitioni dedisse scripsisse iudicaretur. Prima luce, cum quibus mons aliud consensu ab eo.
+Plura mihi bona sunt, inclinet, amari petere vellent. Quisque ut dolor gravida, placerat libero vel, euismod. Quo usque tandem abutere, Catilina, patientia nostra? Phasellus laoreet lorem vel dolor tempus vehicula. Me non paenitet nullum festiviorem excogitasse ad hoc.
+Sed haec quis possit intrepidus aestimare tellus. Pellentesque habitant morbi tristique senectus et netus. Tityre, tu patulae recubans sub tegmine fagi dolor. A communi observantia non est recedendum. Idque Caesaris facere voluntate liceret: sese habere.
+Inmensae subtilitatis, obscuris et malesuada fames. Curabitur est gravida et libero vitae dictum. Integer legentibus erat a ante historiarum dapibus. Salutantibus vitae elit libero, a pharetra augue. Fabio vel iudice vincam, sunt in culpa qui officia.
