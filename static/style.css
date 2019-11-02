@@ -58,7 +58,7 @@ header {
   /* background: url('static/banner-type-2.svg') center center / 100% auto; */
 }
 
-main {
+main, .page-change-arrows {
   position: relative !important;
   max-width: var(--maxWidth) !important;
   margin: auto !important;

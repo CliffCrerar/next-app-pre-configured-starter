@@ -1,15 +1,21 @@
-# Introduction
+# Fokodis nas paske
 
 ---
 
-Herein I have encapsulated an outline of how I would go about carrying the burden that comes along with the role, and it scared me a little. Following our meeting, I started asking myself, Cliff if you get this, would you even know what to do? On my credentials I try to be as transparent as possible. I don't think I would have received the invitation likely, I was so caught up with code tests the days leading up to the meeting, I by my own admission was ill prepared. { class="caps-start"}
+Tityre, tu patulae recubans sub tegmine fagi dolor. Integer legentibus erat a ante historiarum dapibus. Quo usque tandem abutere, Catilina, patientia nostra?
 
-Up until then, my interviews were for a *developer / writer of code / creator of software*. In these encounters, I get peppered with questions on *theory, practice and process, advantages of this, what decision to make when that*, that week my evenings were senior level code tests, my day spent practicing code. When I arrived I was very much in a mode. I only afterward I realized that this meeting was not run of the mill, not even close. You wanted me to sell you on why I should be the CTO of your company. I apologize for only realising it after the fact.
+Tu quoque, Brute, fili mi, nihil timor populi, nihil! Quisque placerat facilisis egestas cillum dolore. Ab illo tempore, ab est sed immemorabili. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ullamco laboris nisi ut aliquid ex ea commodi consequat.
 
-Believe it or not, I associated more with you than many in my field, most of whom do things the way its always been done, comfortably. I find it extremely uncomfortable when things are comfortable. Feeling this means I am not pushing the boundaries. Stagnation is my enemy. The way you spoke about how you wish to operate was inspiring.
+Sed haec quis possit intrepidus aestimare tellus. Cras mattis iudicium purus sit amet fermentum. Hi omnes lingua, institutis, legibus inter se differunt.
 
-#### Before I developed software
+#### Mercedem aut nummos
 
-I was a consultant once, for a long time, before I became a student of tech. I used be articulate, these days not so much anymore. I find I express myself better in writing than in speech. Recent years my thoughts translated into features of an application. Before I presented it in a boardrooms. Only a bump in the road, exposure to the right environment will swiftly resolve this. In contrast, I have always been a man of action, I am not a good talker. What I can do is what will impress, not what I can say I can do.
+---
 
-So this is my manifesto, my attempt to sell you on why you should pick me for the job. I apologise in advance if it is incredibly boring. May I only ask one favour of you, I had taken the time to create this just for you (Josh Kaplan), the favour is to please do me the courtesy to read it.
+Curabitur blandit tempus ardua ridiculus sed magna. Ullamco laboris nisi ut aliquid ex ea commodi consequat. Me non paenitet nullum festiviorem excogitasse ad hoc. Plura mihi bona sunt, inclinet, amari petere vellent. Quo usque tandem abutere, Catilina, patientia nostra? Cum sociis natoque penatibus et magnis dis parturient.
+
+Petierunt uti sibi concilium totius Galliae in diem certam indicere. Quam diu etiam furor iste tuus nos eludet? Hi omnes lingua, institutis, legibus inter se differunt.
+
+At nos hinc posthac, sitientis piros Afros. Curabitur est gravida et libero vitae dictum. Gallia est omnis divisa in partes tres, quarum. Unam incolunt Belgae, aliam Aquitani, tertiam. Integer legentibus erat a ante historiarum dapibus.
+
+Prima luce, cum quibus mons aliud consensu ab eo. Tu quoque, Brute, fili mi, nihil timor populi, nihil! Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.

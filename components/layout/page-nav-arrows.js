@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import { LeftArrow, RightArrow } from 'left-right-icons';
+import NavLinks from './nav-links';
 // Nav arrow buttons
 export default class NavArrows extends Component {
     constructor(props) {

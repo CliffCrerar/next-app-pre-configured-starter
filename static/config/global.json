@@ -6,7 +6,8 @@
         "hrClass":"header-hr"
     },
     "layout":{
-        "excludeRoutes":[]
+        "excludeRoutes":["/",""],
+        "showNavLinksBottom":true
     },
     "og":{
         "img":"./static/img/_og-image.png",
