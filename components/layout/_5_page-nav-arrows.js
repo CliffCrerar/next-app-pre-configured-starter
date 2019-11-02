@@ -48,8 +48,6 @@ export default class NavArrows extends Component {
 
     render() {
         if (this.props.conf.switches.displayNavArrows) {
-
-
             return (
                 <div className="page-change-arrows">
                     <div
