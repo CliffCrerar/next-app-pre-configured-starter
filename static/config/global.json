@@ -1,20 +1,22 @@
 {
     "switches": {
-        "displayNavBarBrand":true,
-        "defaultPageAuthor": true,
-        "displayPageHeader": true,
-        "showNavLinksBottom": true,
+        "displayNavBarBrand":false,
+        "defaultPageAuthor": false,
+        "defaultLogoutLink": false,
+        "displayPageHeader": false,
+        "showNavLinksBottom": false,
+        "displayNavArrows":false,
         "excludeRoutes": []
     },
     "nav": {
-        "navbarBrand":"NAV",
+        "navbarBrand":"Next.js Starter Demo",
         "pageAuthor": {
             "author": "Cliff Crerar",
             "link": ""
         }
     },
     "header": {
-        "documentTitle": "Next.js Starter App 🤔",
+        "documentTitle": "Pre-configured Demo",
         "documentSubTitle": "Start a new Next.js app in no time",
         "headerElementCSSClass": "",
         "hrElementCSSClass": "header-hr"

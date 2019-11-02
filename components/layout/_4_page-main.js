@@ -6,7 +6,7 @@ import NavLinks from './_1_page-nav-links'
 export default ({ content }) => {
     const { showNavLinksBottom } = content.props.conf.switches;
     // Function determines whether bottom navigation setting is on or off
-    function ShowBottomNavLinks() {
+    function ShowBottomNavLinks({ showNavLinksBottom }) {
         if (showNavLinksBottom) {
             return (
                 <React.Fragment>
@@ -14,6 +14,13 @@ export default ({ content }) => {
                     <ul className="nav-links">
                         <NavLinks />
                     </ul>
+                    
+                </React.Fragment>
+            )
+        } else {
+            return (
+                <React.Fragment>
+                    <div style={{ display: "none" }}></div>
                     <hr />
                 </React.Fragment>
             )
@@ -22,7 +29,7 @@ export default ({ content }) => {
     return (
         <main>
             {content}
-            <ShowBottomNavLinks />
+            <ShowBottomNavLinks showNavLinksBottom={showNavLinksBottom} />
         </main>
     )
 }

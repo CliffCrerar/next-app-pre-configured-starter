@@ -11,7 +11,7 @@ import NavArrows from './_5_page-nav-arrows'
 import {Links} from 'config';
 
 export default (props) => {
-    console.log('LAYOUT MASTER: ', props);
+    // console.log('LAYOUT MASTER: ', props);
     /**
      * Set the title of each page in the browser tab, function uses the pageTitle attribute
      * from the links configuration in static/config
@@ -37,7 +37,7 @@ export default (props) => {
             <Navbar conf={props.conf}/> {/* Navigation bar component */}
             <Header conf={props.conf}/> {/* page header component */}
             <Main content={props.children}/> {/* page content */}
-            <NavArrows router={props.router} links={Links.main} /> {/* Page navigation (next / previous page) */}
+            <NavArrows router={props.router} links={Links.main} conf={props.conf} /> {/* Page navigation (next / previous page) */}
             <Footer/> {/* page footer component */}
             {/* <MousePos /> */}
         </React.Fragment>
