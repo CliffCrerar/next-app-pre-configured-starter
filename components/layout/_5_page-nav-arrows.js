@@ -5,7 +5,7 @@ export default class NavArrows extends Component {
     constructor(props) {
 
         super(props)
-        console.log('NAV ARROWS: ', props);
+        // console.log('NAV ARROWS: ', props);
         this.links = this.props.links;
         this.state = {
             leftArrow: { visibility: 'visible' },
@@ -24,7 +24,7 @@ export default class NavArrows extends Component {
     }
     // Handle control display
     handleControlsDisplay = (newPage) => {
-        console.log('newPage: ', newPage);
+        // console.log('newPage: ', newPage);
         if (newPage === 0) {
             return this.setState({ leftArrow: { visibility: 'hidden' }, rightArrow: { visibility: 'visible' } });
         } else if (newPage === (this.links.length - 1)) {

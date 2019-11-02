@@ -5,7 +5,7 @@
 import NavLinks from './_1_page-nav-links';
 
 export default (props) => {
-    console.log('NAVBAR', props);
+    // console.log('NAVBAR', props);
     return (
         <React.Fragment>
             <nav className="nav-links">
@@ -24,7 +24,6 @@ export default (props) => {
 }
 
 function NavbarBrand(props) {
-    console.log('NavbarBrand: ', props);
     if (props.conf.switches.displayNavBarBrand) {
         return (
             <h4>{props.conf.nav.navbarBrand}</h4>
@@ -60,6 +59,6 @@ function LogOut(props) {
         return (
             <a style={{ display: 'none' }} href="/logged-out">Logout</a>
         )
-        
+
     }
 }
