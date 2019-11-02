@@ -1,18 +1,32 @@
 {
-    "header":{
-        "documentTitle":"Next.js Starter App 🤔",
-        "documentSubTitle":"Start a new Next.js app in no time",
-        "headerClass":"",
-        "hrClass":"header-hr"
+    "switches": {
+        "displayNavBarBrand":true,
+        "defaultPageAuthor": true,
+        "displayPageHeader": true,
+        "showNavLinksBottom": true,
+        "excludeRoutes": []
     },
-    "layout":{
-        "excludeRoutes":["/",""],
-        "showNavLinksBottom":true
+    "nav": {
+        "navbarBrand":"NAV",
+        "pageAuthor": {
+            "author": "Cliff Crerar",
+            "link": ""
+        }
     },
-    "og":{
-        "img":"./static/img/_og-image.png",
-        "description":"Next.js starter app pre-configured with a whole lot of cool stuff so jump in and build that page"
+    "header": {
+        "documentTitle": "Next.js Starter App 🤔",
+        "documentSubTitle": "Start a new Next.js app in no time",
+        "headerElementCSSClass": "",
+        "hrElementCSSClass": "header-hr"
     },
-    "node_path":["./", "./static/","./components/","./components/built-in"]
-    
+    "og": {
+        "img": "./static/img/_og-image.png",
+        "description": "Next.js starter app pre-configured with a whole lot of cool stuff so jump in and build that page"
+    },
+    "node_path": [
+        "./",
+        "./static/",
+        "./components/",
+        "./components/built-in"
+    ]
 }

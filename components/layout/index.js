@@ -4,10 +4,10 @@
  * element in all pages
  */
 
-import { withRouter } from 'next/router'
-import PagesLayout from './layout-master'
-const LayOut = ({children, router}) => {
-    const {excludeRoutes} = children.props.conf.layout;
+import { withRouter } from 'next/router';
+import PagesLayout from './_0_layout-master';
+const Layout = ({children, router, conf}) => {
+    const {excludeRoutes} = children.props.conf.switches;
     /* 
         ROUTING EVENTS
         - Each route has a life cycle and can be accessed as per 
@@ -34,8 +34,8 @@ const LayOut = ({children, router}) => {
     if (excludeRoutes.includes(router.route)) {
         return children;
     } else {
-        return <PagesLayout router={router} children={children} />
+        return <PagesLayout router={router} children={children} conf={conf} />
     }
     //-------------------------------------------------------------------------
 }
-export default withRouter(LayOut)
+export default withRouter(Layout)

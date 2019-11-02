@@ -3,19 +3,12 @@
  */
 import React from 'react'
 import App from 'next/app'
-import LayOut from 'components/layout'
+import Layout from 'components/layout'
 import cookies from 'js-cookie'
 import { withRouter } from 'next/router'
 class MyApp extends App {
   pageText = require('static/pageText.json');
   conf = require('config').Config;
-  
-  
-
-  constructor(){
-    super()
-    console.log('pageConfig: ', this.conf);
-  }
   componentDidMount() {
     console.log('APP DID MOUNT');
     this.paragraphStart(); 
@@ -35,12 +28,12 @@ class MyApp extends App {
     const { Component, pageProps } = this.props
     // pageProps.concat(this.Config);
     pageProps.conf = this.conf
-    console.log('pageProps: ', pageProps);
-    console.log('Component: ', Component);
+    // console.log('pageProps: ', pageProps);
+    // console.log('Component: ', Component);
     return (
-      <LayOut conf={this.conf}>
+      <Layout conf={this.conf}>
         <Component pageText={this.pageText} {...pageProps} />
-      </LayOut>)
+      </Layout>)
   }
 }
 

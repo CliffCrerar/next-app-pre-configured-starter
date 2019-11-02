@@ -3,11 +3,11 @@
  * Consolidates all parts of the site layout and passes it to the index file
  */
 import AppHead from 'built-in/head';
-import Navbar from './navbar';
-import PageHeader from './page-header';
-import Main from './page-main'
-import Footer from './page-footer';
-import NavArrows from './page-nav-arrows'
+import Navbar from './_3_page-navbar';
+import PageHeader from './_2_page-header';
+import Main from './_4_page-main'
+import Footer from './_6_page-footer';
+import NavArrows from './_5_page-nav-arrows'
 import {Links} from 'config';
 
 export default (props) => {
@@ -33,7 +33,7 @@ export default (props) => {
     return (
         <React.Fragment>
             <AppHead title={pageTitle(props)} /> {/* Pre configured Next.js Head object. Component can be found at components/head */}
-            <Navbar/> {/* Navigation bar component */}
+            <Navbar conf={props.conf}/> {/* Navigation bar component */}
             <PageHeader /> {/* page header component */}
             <Main content={props.children}/> {/* page content */}
             <NavArrows router={props.router} links={Links.main} /> {/* Page navigation (next / previous page) */}

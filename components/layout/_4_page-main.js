@@ -1,10 +1,10 @@
 /**
  * Main site content container component
  */
-import NavLinks from './nav-links'
+import NavLinks from './_1_page-nav-links'
 
 export default ({ content }) => {
-    const { showNavLinksBottom } = content.props.conf.layout;
+    const { showNavLinksBottom } = content.props.conf.switches;
     // Function determines whether bottom navigation setting is on or off
     function ShowBottomNavLinks() {
         if (showNavLinksBottom) {
