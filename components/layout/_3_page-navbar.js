@@ -5,7 +5,7 @@
 import NavLinks from './_1_page-nav-links';
 
 export default (props) => {
-    console.log('NAVBAR',props);
+    // console.log('NAVBAR',props);
     return (
         <React.Fragment>
             <nav className="nav-links">

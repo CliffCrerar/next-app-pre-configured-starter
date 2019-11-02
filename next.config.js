@@ -15,20 +15,15 @@ const
   // {exportMap} = require('./static/utils'),
   webpack = require('webpack'),
   dotenv = require('dotenv'),
-  plugins = [
-    [sass],
-    [sourceMaps]
-  ],
+  plugins = [[sass], [sourceMaps]],
   // Config file
   node_path = require('./static/config').Config.node_path;
-
-  
 // Setup Node Path
 process.env.NODE_PATH = node_path.join(os.platform() === 'win32' ? ';' : ':');
 buildText();
-console.log('|------------------------------------------|');
-console.log('|--> MODE: ',mode?'Development':'Production');
-console.log('|------------------------------------------|');
+console.log('|------------------------------------------------|');
+console.log('|--> MODE: ', mode ? 'Development' : 'Production'  );
+console.log('|------------------------------------------------|');
 dotenv.config(); // initialize .env file
 module.exports = withPlugins(plugins, {
   target: mode ? 'server' : 'serverless',
@@ -41,4 +36,4 @@ module.exports = withPlugins(plugins, {
     config.plugins.push(env)
     return config;
   }
-})
+});

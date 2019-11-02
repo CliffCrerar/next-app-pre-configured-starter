@@ -2,7 +2,7 @@
  * Operations page
  */
 import MatNextMarkdown from 'mat-next-markdown';
-import IaaS from 'components/iaas';
+import {IaaS} from 'built-in/example-components';
 export default (props) => {
   const { pageText } = props;
   return (

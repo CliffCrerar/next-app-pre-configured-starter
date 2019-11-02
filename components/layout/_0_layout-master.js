@@ -4,13 +4,14 @@
  */
 import AppHead from 'built-in/head';
 import Navbar from './_3_page-navbar';
-import PageHeader from './_2_page-header';
+import Header from './_2_page-header';
 import Main from './_4_page-main'
 import Footer from './_6_page-footer';
 import NavArrows from './_5_page-nav-arrows'
 import {Links} from 'config';
 
 export default (props) => {
+    console.log('LAYOUT MASTER: ', props);
     /**
      * Set the title of each page in the browser tab, function uses the pageTitle attribute
      * from the links configuration in static/config
@@ -22,7 +23,7 @@ export default (props) => {
             .main // use main links from config
             .concat(Links.sub) // join with sub links from config
             .filter(link => '/' // filter out links by route
-            .concat(link.href) === props.router.pathname)[0] // filter discrimation
+            .concat(link.href) === props.router.pathname)[0] // filter discrimination
             .pageTitle; // get page title from filtration
         } catch (err) { // catch error
             const errMsg = `Page Title Error: ${err}` // set error message
@@ -34,7 +35,7 @@ export default (props) => {
         <React.Fragment>
             <AppHead title={pageTitle(props)} /> {/* Pre configured Next.js Head object. Component can be found at components/head */}
             <Navbar conf={props.conf}/> {/* Navigation bar component */}
-            <PageHeader /> {/* page header component */}
+            <Header conf={props.conf}/> {/* page header component */}
             <Main content={props.children}/> {/* page content */}
             <NavArrows router={props.router} links={Links.main} /> {/* Page navigation (next / previous page) */}
             <Footer/> {/* page footer component */}

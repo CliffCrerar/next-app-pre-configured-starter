@@ -4,7 +4,7 @@
 import React from 'react'
 import App from 'next/app'
 import Layout from 'components/layout'
-import cookies from 'js-cookie'
+// import cookies from 'js-cookie'
 import { withRouter } from 'next/router'
 class MyApp extends App {
   pageText = require('static/pageText.json');
@@ -26,10 +26,7 @@ class MyApp extends App {
   }
   render() {
     const { Component, pageProps } = this.props
-    // pageProps.concat(this.Config);
     pageProps.conf = this.conf
-    // console.log('pageProps: ', pageProps);
-    // console.log('Component: ', Component);
     return (
       <Layout conf={this.conf}>
         <Component pageText={this.pageText} {...pageProps} />

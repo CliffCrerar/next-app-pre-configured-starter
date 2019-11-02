@@ -1,0 +1,18 @@
+$arrowHeight:30px;
+$arrowColor: black;
+$hoverForeGround: grey;
+$hoverBackground:#dcdad5;
+$borderRadius:50%;
+svg{
+    color: $arrowColor;
+    height: $arrowHeight;
+    border-radius: $borderRadius;
+    -webkit-border-radius: $borderRadius;
+    -moz-border-radius: $borderRadius;
+    -ms-border-radius: $borderRadius;
+    -o-border-radius: $borderRadius;
+}
+svg:hover{
+    color: $hoverBackground;
+    transform: scale(1.2);
+}

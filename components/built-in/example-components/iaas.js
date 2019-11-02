@@ -2,7 +2,7 @@
  * COMPONENT: Infrastructure as a service
  */
 import { Component } from 'react';
-import Diagram from './cloud-diagram_1';
+import {CloudDiagram1} from 'built-in/example-components';
 const
   diagramName = 'Cloud Architecture Diagram',
   diagramSubTitle = 'This is an rough estimation of what the Imagine Cloud architecture would look like.',
@@ -25,7 +25,7 @@ class IaaS extends Component {
           <p>{diagramSubTitle}</p>
           <hr />
           <div id="container">
-            <Diagram height={this.state.height + 'px'} width="100%" />
+            <CloudDiagram1 height={this.state.height + 'px'} width="100%" />
           </div>
           <hr />
           <div style={{ textAlign: 'right' }}>

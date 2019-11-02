@@ -20,7 +20,14 @@ export default (props) => {
         </header>
     )
     try {
+        console.log('HEADER: ', props);
         const { documentTitle, documentSubTitle, headerElementCSSClass, hrElementCSSClass } = props.conf.header
+        console.log('documentTitle: ', documentTitle);
+        console.log('documentSubTitle: ', documentSubTitle);
+        console.log('headerElementCSSClass: ', headerElementCSSClass);
+        console.log('hrElementCSSClass: ', hrElementCSSClass);
+        
+        
         const headerCssClass = headerElementCSSClass === "" ? 'default-header' : headerElementCSSClass;
         const headerHrCssClass = hrElementCSSClass === "" ? 'default-hr-class' : hrElementCSSClass;
         if(props.conf.switches.displayHeader){
