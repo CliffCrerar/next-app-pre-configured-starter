@@ -1,11 +1,6 @@
 {
     "switches": {
         "displayNavBarBrand":false,
-        "defaultPageAuthor": false,
-        "defaultLogoutLink": false,
-        "displayPageHeader": false,
-        "showNavLinksBottom": false,
-        "displayNavArrows":false,
         "excludeRoutes": []
     },
     "nav": {
@@ -14,12 +9,6 @@
             "author": "Cliff Crerar",
             "link": ""
         }
-    },
-    "header": {
-        "documentTitle": "Pre-configured Demo",
-        "documentSubTitle": "Start a new Next.js app in no time",
-        "headerElementCSSClass": "",
-        "hrElementCSSClass": "header-hr"
     },
     "og": {
         "img": "./static/img/_og-image.png",

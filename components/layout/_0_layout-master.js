@@ -35,9 +35,7 @@ export default (props) => {
         <React.Fragment>
             <AppHead title={pageTitle(props)} /> {/* Pre configured Next.js Head object. Component can be found at components/head */}
             <Navbar conf={props.conf}/> {/* Navigation bar component */}
-            <Header conf={props.conf}/> {/* page header component */}
             <Main content={props.children}/> {/* page content */}
-            <NavArrows router={props.router} links={Links.main} conf={props.conf} /> {/* Page navigation (next / previous page) */}
             <Footer/> {/* page footer component */}
             {/* <MousePos /> */}
         </React.Fragment>

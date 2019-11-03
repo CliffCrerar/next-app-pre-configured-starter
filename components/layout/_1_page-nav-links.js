@@ -6,19 +6,15 @@
 import { Links } from 'config'
 import { withRouter } from 'next/router';
 import Link from 'next/link'
-
-
+// Map links
 const links = Links.main.map(link => {
     link.key = `nav-link-${link.href}-${link.label}`
     return link
 });
-
 // Nav links display at top and bottom of page
 const NavLinks = (props) => {
-    // return <div>LINKS</div>
     const route = props.router.route;
     return links.map(({ key, href, label, pageTitle }, i) => {
-        // console.log('i: ', i);
         function isActive(route) {
             if ('/' + href === route) {
                 return 'isActiveNow';
