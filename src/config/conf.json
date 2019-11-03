@@ -1,11 +1,53 @@
 {
+    "pages": {
+        "main": [
+            {
+                "href": "",
+                "label": "Page 0",
+                "pageTitle": "Home Page"
+            },
+            {
+                "href": "page-1",
+                "label": "Page 1",
+                "pageTitle": "Example Page 1"
+            },
+            {
+                "href": "page-2",
+                "label": "Page 2",
+                "pageTitle": "Example Page 2"
+            },
+            {
+                "href": "page-3",
+                "label": "Page 3",
+                "pageTitle": "Example Page 3"
+            },
+            {
+                "href": "page-4",
+                "label": "Page 4",
+                "pageTitle": "Example Page 4"
+            }
+        ],
+        "sub": [
+            {
+                "href": "logged-out",
+                "label": "Logged Out",
+                "pageTitle": "React Website Starter"
+            }
+        ]
+    },
+    "head":{
+        "charSet":"UTF-8"
+    },
+    "global-styles":[
+
+    ],
     "switches": {
-        "displayNavBarBrand":false,
-        "capitalizeParagraphStart":true,
+        "displayNavBarBrand": false,
+        "capitalizeParagraphStart": true,
         "excludeRoutes": []
     },
     "nav": {
-        "navbarBrand":"Next.js Starter Demo",
+        "navbarBrand": "Next.js Starter Demo",
         "pageAuthor": {
             "author": "Cliff Crerar",
             "link": ""
@@ -17,14 +59,20 @@
     },
     "node_path": [
         "./",
-        ".public/static/",
-        ".src/components/",
-        ".src/components/built-in"
+        "./public/static/",
+        "./src",
+        "./src/components/",
+        "./src/components/core"
     ],
-    "api":{
-        "cors":{
-            "allowMethods":["POST","GET"],
-            "allowHeaders":["Content-Type"]
+    "api": {
+        "cors": {
+            "allowMethods": [
+                "POST",
+                "GET"
+            ],
+            "allowHeaders": [
+                "Content-Type"
+            ]
         }
     }
 }

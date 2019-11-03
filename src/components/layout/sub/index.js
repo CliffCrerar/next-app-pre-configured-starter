@@ -2,7 +2,7 @@
  * Layout Master
  * Consolidates all parts of the site layout and passes it to the index file
  */
-import AppHead from 'built-in/head';
+import AppHead from 'head';
 import Navbar from './nav';
 // import Header from './_2_page-header';
 import Main from './main'
@@ -33,7 +33,7 @@ export default (props) => {
     }
     return (
         <React.Fragment>
-            <AppHead title={pageTitle(props)} /> {/* Pre configured Next.js Head object. Component can be found at components/head */}
+            <AppHead title={pageTitle(props)} conf={props.conf} /> {/* Pre configured Next.js Head object. Component can be found at components/head */}
             <Navbar conf={props.conf}/> {/* Navigation bar component */}
             <Main content={props.children}/> {/* page content */}
             <Footer/> {/* page footer component */}

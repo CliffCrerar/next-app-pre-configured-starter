@@ -6,15 +6,15 @@ import NextHead from 'next/head'
 import { string } from 'prop-types'
 import { Component } from 'react';
 import {Config}from 'config';
+import {AppTitle,NonOpenGraphMeta}from './defaults'
 class Head extends Component {
-    defaultDescription = 'This is a Next.js webpage';
-    state = { state: 'note' };
+    
     defaultOGImage='img/_og-image.png';
     defaultOGURL = process.env.ORIGIN;
 
     constructor(props) {
         super(props)
-        // console.log('props: ', props);
+        console.log('props: ', props);
   }
 
     componentDidMount() {
@@ -24,13 +24,8 @@ class Head extends Component {
     render() {
         return (
             <NextHead>
-                <meta charSet="UTF-8" />
-                <title>{this.props.title}</title>
-                <meta
-                    name="description"
-                    content={this.props.description || this.defaultDescription}
-                />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <AppTitle charset={this.props.conf.head.charset}>{this.props.title}</AppTitle>
+                <NonOpenGraphMeta/>
                 <link rel="icon" sizes="192x192" href="/static/touch-icon.png" />
                 <link rel="apple-touch-icon" href="/static/touch-icon.png" />
                 <link rel="mask-icon" href="/static/favicon-mask.svg" color="#49B882" />

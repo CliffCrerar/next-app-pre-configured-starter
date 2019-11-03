@@ -9,6 +9,7 @@ import { withRouter } from 'next/router'
 class MyApp extends App {
   
   conf = require('config').Config;
+  links = require('config').Links;
   componentDidMount() {
     console.log('APP DID MOUNT');
     this.paragraphStart();
@@ -27,8 +28,9 @@ class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props
     pageProps.conf = this.conf
+    pageProps.links = this.links
     return (
-      <Layout conf={this.conf}>
+      <Layout conf={this.conf} Links={this.links}>
         <Component {...pageProps} />
       </Layout>)
   }

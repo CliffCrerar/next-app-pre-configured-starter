@@ -6,7 +6,7 @@ const
     dotenv = require('dotenv'),
     cors = require('./_cors.js'),
     devMode = process.env.NODE_ENV === 'development',
-    {httpJobs, handleError} = require('http-workers');
+    {httpJobs, handleError} = require('./http-workers');
 
 devMode && dotenv.config();
 // API Entry

@@ -1,4 +1,4 @@
-const Links = require('./links');
-const Config = require('./conf.json');
 
-module.exports = {Links,Config};
+const Config = require('./conf.json');
+const Links = Config.pages;
+module.exports = {Config,Links};
