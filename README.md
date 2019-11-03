@@ -1,5 +1,7 @@
 # Next.js website starter
 
+> ### This is still a WORK IN PROGRESS
+
 ## Starter template for next.js pre-configured with:
 
 ### Plugins
