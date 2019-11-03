@@ -20,5 +20,11 @@
         "./static/",
         "./components/",
         "./components/built-in"
-    ]
+    ],
+    "api":{
+        "cors":{
+            "allowMethods":["POST","GET"],
+            "allowHeaders":["Content-Type"]
+        }
+    }
 }
