@@ -17,9 +17,9 @@
     },
     "node_path": [
         "./",
-        "./static/",
-        "./components/",
-        "./components/built-in"
+        ".public/static/",
+        ".src/components/",
+        ".src/components/built-in"
     ],
     "api":{
         "cors":{

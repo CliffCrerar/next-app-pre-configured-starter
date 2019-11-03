@@ -7,7 +7,7 @@ import Layout from 'components/layout'
 // import cookies from 'js-cookie'
 import { withRouter } from 'next/router'
 class MyApp extends App {
-  pageText = require('static/pageText.json');
+  
   conf = require('config').Config;
   componentDidMount() {
     console.log('APP DID MOUNT');
@@ -29,7 +29,7 @@ class MyApp extends App {
     pageProps.conf = this.conf
     return (
       <Layout conf={this.conf}>
-        <Component pageText={this.pageText} {...pageProps} />
+        <Component {...pageProps} />
       </Layout>)
   }
 }

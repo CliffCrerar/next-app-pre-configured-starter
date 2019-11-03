@@ -3,7 +3,6 @@
  */
 // declare variables call plugins;
 const
-  buildText = require('./static/buildText'),
   withPlugins = require('next-compose-plugins'),
   sourceMaps = require('@zeit/next-source-maps'),
   sass = require('@zeit/next-sass'),
@@ -17,10 +16,9 @@ const
   dotenv = require('dotenv'),
   plugins = [[sass], [sourceMaps]],
   // Config file
-  node_path = require('./static/config').Config.node_path;
+  node_path = require('./src/config').Config.node_path;
 // Setup Node Path
 process.env.NODE_PATH = node_path.join(os.platform() === 'win32' ? ';' : ':');
-buildText();
 console.log('|------------------------------------------------|');
 console.log('|--> MODE: ', mode ? 'Development' : 'Production'  );
 console.log('|------------------------------------------------|');
