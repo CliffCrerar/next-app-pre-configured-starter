@@ -5,7 +5,7 @@
  */
 
 import { withRouter } from 'next/router';
-import PagesLayout from './_0_layout-master';
+import PagesLayout from './sub';
 const Layout = ({children, router, conf}) => {
     const {excludeRoutes} = children.props.conf.switches;
     /* 

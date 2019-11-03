@@ -1,0 +1,24 @@
+{
+    "switches": {
+        "displayNavBarBrand":false,
+        "capitalizeParagraphStart":true,
+        "excludeRoutes": []
+    },
+    "nav": {
+        "navbarBrand":"Next.js Starter Demo",
+        "pageAuthor": {
+            "author": "Cliff Crerar",
+            "link": ""
+        }
+    },
+    "og": {
+        "img": "./static/img/_og-image.png",
+        "description": "Next.js starter app pre-configured with a whole lot of cool stuff so jump in and build that page"
+    },
+    "node_path": [
+        "./",
+        "./static/",
+        "./components/",
+        "./components/built-in"
+    ]
+}

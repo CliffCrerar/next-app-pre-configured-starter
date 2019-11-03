@@ -11,7 +11,7 @@ class MyApp extends App {
   conf = require('config').Config;
   componentDidMount() {
     console.log('APP DID MOUNT');
-    this.paragraphStart(); 
+    this.paragraphStart();
   }
   paragraphStart() {
     if (process.browser) {
