@@ -1,21 +1,32 @@
-import { throws } from "assert";
-
 /**
  * DEFAULT HEAD: NON Open graph meta tags
  */
-import propTypes from 'prop-types';
+import {string} from 'prop-types';
+import {Config} from 'config';
 const NonOpenGraphMeta = (props) => {
-    defaultDescription = 'This is a Next.js webpage';
-    defaultViewPort = 'width=device-width, initial-scale=1'
+    console.log('props: ', props);
+    
+    // defaultViewPort = 'width=device-width, initial-scale=1'
     return (
         <React.Fragment>
             <meta
                 name="description"
-                content={this.props.description || this.defaultDescription}
+                content={props.description || props.defaultDescription}
             />
-            <meta name="viewport" content={this.defaultViewPort} />
+            <meta name="viewport" content={props.viewPort || props.defaultViewPort} />
         </React.Fragment>
     )
+}
+NonOpenGraphMeta.propTypes = {
+    defaultDescription: string,
+    defaultViewPort: string,
+    defaultTitle: string
+}
+
+NonOpenGraphMeta.defaultProps = {
+    defaultDescription: Config.head.defaultDescription,
+    defaultTitle: Config.head.defaultTitle,
+    defaultViewPort: Config.head.defaultViewPort
 }
 
 export default NonOpenGraphMeta;

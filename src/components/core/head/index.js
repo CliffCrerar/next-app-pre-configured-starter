@@ -6,7 +6,7 @@ import NextHead from 'next/head'
 import { string } from 'prop-types'
 import { Component } from 'react';
 import {Config}from 'config';
-import {AppTitle,NonOpenGraphMeta}from './defaults'
+import {AppTitle/*NonOpenGraphMeta*/,StyleLinks}from './defaults'
 class Head extends Component {
     
     defaultOGImage='img/_og-image.png';
@@ -25,7 +25,7 @@ class Head extends Component {
         return (
             <NextHead>
                 <AppTitle charset={this.props.conf.head.charset}>{this.props.title}</AppTitle>
-                <NonOpenGraphMeta/>
+                {/* <NonOpenGraphMeta/> */}
                 <link rel="icon" sizes="192x192" href="/static/touch-icon.png" />
                 <link rel="apple-touch-icon" href="/static/touch-icon.png" />
                 <link rel="mask-icon" href="/static/favicon-mask.svg" color="#49B882" />
@@ -39,7 +39,7 @@ class Head extends Component {
                 <meta property="og:image" content={this.props.ogImage || this.defaultOGImage} />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
-                <link rel="stylesheet" href="static/style.css" />
+                <StyleLinks/>
             </NextHead>
         )
     }
@@ -54,7 +54,7 @@ Head.propTypes = {
 Head.defaultProps = {
     ogImage: Config.og.img,
     url:'',
-    description: Config.og.description
+    description: Config.head.defaultDescription
 }
 
 export default Head

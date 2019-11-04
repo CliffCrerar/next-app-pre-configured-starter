@@ -35,12 +35,13 @@
             }
         ]
     },
-    "head":{
-        "charSet":"UTF-8"
+    "head": {
+        "charSet": "UTF-8",
+        "default-title": "Next.js Strapper",
+        "defaultDescription": "This is a Next.js Application",
+        "defaultViewPort": "width=device-width, initial-scale=1, shrink-to-fit=no"
     },
-    "global-styles":[
-
-    ],
+    "global-styles": ["styles/default.css"],
     "switches": {
         "displayNavBarBrand": false,
         "capitalizeParagraphStart": true,
