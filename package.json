@@ -1,6 +1,6 @@
 {
   "name": "next-app-pre-configured-starter",
-  "version": "0.5.0",
+  "version": "0.5.6",
   "scripts": {
     "dev": "next",
     "build": "next build",
