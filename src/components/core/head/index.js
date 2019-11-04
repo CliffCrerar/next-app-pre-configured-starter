@@ -11,8 +11,6 @@ class AppHead extends Component {
     defaultTitle;
     defaultViewPort;
     defaultOGURL = process.env.ORIGIN;
-
-
     constructor(props) {
         super(props)
         this.defaultDescription = this.props.conf.head.defaultDescription;
@@ -24,22 +22,16 @@ class AppHead extends Component {
 
     componentDidMount() {
         this.url = window.location.href;
-
         this.nextHeadPolyfill();
     }
 
-
     nextHeadPolyfill() {
 
-        window.onload = function () {
-            console.log('window loaded');
-        }
+        window.onload = function () {console.log('window loaded');}
 
         function runPolyFill() {
             var bodyLinks = document.body.getElementsByTagName('link');
-
             var bodyMeta = document.body.getElementsByTagName('meta');
-
             function forEach(callback) {
                 console.log('fe', this)
                 for (let i = 0; i < this.length; i++) {
@@ -48,24 +40,17 @@ class AppHead extends Component {
             }
             bodyLinks.forEach = forEach;
             bodyMeta.forEach = forEach;
-
             console.log('bodyLinks: ', bodyLinks);
             console.log('bodyMeta: ', bodyMeta);
             bodyLinks.forEach(appendHead)
             // bodyMeta.forEach(appendHead)
-
             function appendHead(...params) {
                 // console.log(params);
                 const el = params[0];
-
                 const idx = params[1];
-
                 const h = document.head;
-
                 console.log('index: ', idx);
                 console.log('element: ', el);
-
-
                 h.appendChild(el);
                 return;
             }
