@@ -2,7 +2,7 @@
  * Layout Master
  * Consolidates all parts of the site layout and passes it to the index file
  */
-import AppHead from 'head';
+import AppHead from 'core/head';
 import Navbar from './nav';
 // import Header from './_2_page-header';
 import Main from './main'

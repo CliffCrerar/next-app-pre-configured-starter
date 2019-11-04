@@ -1,4 +1,48 @@
 {
+    "head": {
+        "charSet": "UTF-8",
+        "defaultTitle": "Next.js Strapper",
+        "defaultDescription": "This is a Next.js Application",
+        "defaultViewPort": "width=device-width, initial-scale=1, shrink-to-fit=no",
+        "defaultOGimage": "static/img/default/_og-image.ong"
+    },
+    "global-styles": [
+        "https://cdn-cloudflare.ga/assets/bootstrap-4.3.1/dist/css/bootstrap.css"
+    ],
+    "switches": {
+        "displayNavBarBrand": false,
+        "capitalizeParagraphStart": true,
+        "excludeRoutes": []
+    },
+    "nav": {
+        "navbarBrand": "Next.js Starter Demo",
+        "pageAuthor": {
+            "author": "Cliff Crerar",
+            "link": ""
+        }
+    },
+    "og": {
+        "img": "./static/img/_og-image.png",
+        "description": "Next.js starter app pre-configured with a whole lot of cool stuff so jump in and build that page"
+    },
+    "node_path": [
+        "./",
+        "./public/static/",
+        "./src",
+        "./src/components/",
+        "./src/components/core"
+    ],
+    "api": {
+        "cors": {
+            "allowMethods": [
+                "POST",
+                "GET"
+            ],
+            "allowHeaders": [
+                "Content-Type"
+            ]
+        }
+    },
     "pages": {
         "main": [
             {
@@ -34,46 +78,5 @@
                 "pageTitle": "React Website Starter"
             }
         ]
-    },
-    "head": {
-        "charSet": "UTF-8",
-        "default-title": "Next.js Strapper",
-        "defaultDescription": "This is a Next.js Application",
-        "defaultViewPort": "width=device-width, initial-scale=1, shrink-to-fit=no"
-    },
-    "global-styles": ["styles/default.css"],
-    "switches": {
-        "displayNavBarBrand": false,
-        "capitalizeParagraphStart": true,
-        "excludeRoutes": []
-    },
-    "nav": {
-        "navbarBrand": "Next.js Starter Demo",
-        "pageAuthor": {
-            "author": "Cliff Crerar",
-            "link": ""
-        }
-    },
-    "og": {
-        "img": "./static/img/_og-image.png",
-        "description": "Next.js starter app pre-configured with a whole lot of cool stuff so jump in and build that page"
-    },
-    "node_path": [
-        "./",
-        "./public/static/",
-        "./src",
-        "./src/components/",
-        "./src/components/core"
-    ],
-    "api": {
-        "cors": {
-            "allowMethods": [
-                "POST",
-                "GET"
-            ],
-            "allowHeaders": [
-                "Content-Type"
-            ]
-        }
     }
 }

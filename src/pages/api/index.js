@@ -13,7 +13,7 @@ devMode && dotenv.config();
 function EndPoint(req, res) {
     console.log('CALLED API', req.body, req.query);
     try{
-        res.status(200).text('Result of API call');
+        res.status(200).send('Result of API call');
     } catch(err){
         handleError(err,res)
     }

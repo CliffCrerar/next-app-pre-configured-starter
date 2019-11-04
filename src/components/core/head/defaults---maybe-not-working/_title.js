@@ -2,13 +2,16 @@
  * Page tab title
  */
 import { string } from 'prop-types'
+import Head from 'next/head'
 const AppTitle = ({ charset, children }) => {
+    console.log('charset: ', charset);
+    console.log('children: ', children);
 
     return (
-        <React.Fragment>
-            <meta charSet={charset} />
-            <title>{children}</title>
-        </React.Fragment>
+        // <Head>
+        //     <meta charSet={charset} />
+        //     <title>{children}</title>
+        // </Head>
     )
 
 }

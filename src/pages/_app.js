@@ -13,6 +13,13 @@ class MyApp extends App {
   componentDidMount() {
     console.log('APP DID MOUNT');
     this.paragraphStart();
+    
+    
+  }
+  
+  listenForLoadEnd(ev){
+    console.log('ev: ', ev); 
+    
   }
   paragraphStart() {
     if (process.browser) {
@@ -30,6 +37,7 @@ class MyApp extends App {
     pageProps.conf = this.conf
     pageProps.links = this.links
     return (
+      // <AppHead/>
       <Layout conf={this.conf} Links={this.links}>
         <Component {...pageProps} />
       </Layout>)
