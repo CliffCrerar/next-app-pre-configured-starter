@@ -1,0 +1,8 @@
+{
+    "md-it-api":{"html": true,"linkify": true,"typographer": true},
+    "init-state":{
+        "containerClasses": ["contained"],
+        "markdownFile": "# Loading Markdown File"
+    },
+    "md-err-string":"# {{:status}} \n### ERROR: CANNOT GET MARKDOWN \n- URL: {{:url}}\n- OK: {{:ok}}\n- MESSAGE: {{:message}}"
+}

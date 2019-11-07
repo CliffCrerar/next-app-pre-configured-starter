@@ -1,0 +1,82 @@
+{
+    "head": {
+        "charSet": "UTF-8",
+        "defaultTitle": "Next.js Strapper",
+        "defaultDescription": "This is a Next.js Application",
+        "defaultViewPort": "width=device-width, initial-scale=1, shrink-to-fit=no",
+        "defaultOGimage": "static/img/default/_og-image.ong"
+    },
+    "global-styles": [
+        "https://cdn-cloudflare.ga/assets/bootstrap-4.3.1/dist/css/bootstrap.css"
+    ],
+    "switches": {
+        "displayNavBarBrand": false,
+        "capitalizeParagraphStart": true,
+        "excludeRoutes": []
+    },
+    "nav": {
+        "navbarBrand": "Next.js Starter Demo",
+        "pageAuthor": {
+            "author": "Cliff Crerar",
+            "link": ""
+        }
+    },
+    "og": {
+        "img": "./static/img/_og-image.png",
+        "description": "Next.js starter app pre-configured with a whole lot of cool stuff so jump in and build that page"
+    },
+    "node_path": [
+        "./",
+        "./public/static/",
+        "./src",
+        "./src/components/",
+        "./src/components/core"
+    ],
+    "api": {
+        "cors": {
+            "allowMethods": [
+                "POST",
+                "GET"
+            ],
+            "allowHeaders": [
+                "Content-Type"
+            ]
+        }
+    },
+    "pages": {
+        "main": [
+            {
+                "href": "",
+                "label": "Page 0",
+                "pageTitle": "Home Page"
+            },
+            {
+                "href": "page-1",
+                "label": "Page 1",
+                "pageTitle": "Example Page 1"
+            },
+            {
+                "href": "page-2",
+                "label": "Page 2",
+                "pageTitle": "Example Page 2"
+            },
+            {
+                "href": "page-3",
+                "label": "Page 3",
+                "pageTitle": "Example Page 3"
+            },
+            {
+                "href": "page-4",
+                "label": "Page 4",
+                "pageTitle": "Example Page 4"
+            }
+        ],
+        "sub": [
+            {
+                "href": "logged-out",
+                "label": "Logged Out",
+                "pageTitle": "React Website Starter"
+            }
+        ]
+    }
+}

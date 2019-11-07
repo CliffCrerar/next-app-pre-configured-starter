@@ -1,0 +1,36 @@
+{
+    "app_config": {
+        "node_path":["./","./src","./src/components"]
+    },
+    "layout_config": {
+        "nav": {
+            "active": true,
+            "classes": {
+                "display": "block"
+            },
+            "links": [
+                {
+                    "route": "",
+                    "nav-label": "",
+                    "page-title": "",
+                    "page-as": ""
+                }
+            ]
+        },
+        "header": {
+            "classes": {
+                "display": "block"
+            }
+        },
+        "main": {
+            "classes": {
+                "display": "block"
+            }
+        },
+        "footer": {
+            "classes": {
+                "display": "block"
+            }
+        }
+    }
+}
