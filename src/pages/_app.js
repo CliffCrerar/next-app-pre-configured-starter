@@ -9,7 +9,6 @@ import 'styles.scss'
 // console.log('confJSON: ', confJSON);
 
 class NextApp extends App {
-  appTitle;
   // Only uncomment this method if you have blocking data requirements for
   // every single page in your application. This disables the ability to
   // perform automatic static optimization, causing every page in your app to
@@ -41,7 +40,7 @@ class NextApp extends App {
   }
 
   // DEV TOOL
-  displayBodyText() { 
+  displayBodyText() {   
     if (this.props.config.app_config.displayBodyText) {
       const divEl = document.createElement('div')
       divEl.innerHTML = `<h1 style="position: absolute; top: 50%">Body</h1>`;
@@ -59,11 +58,13 @@ class NextApp extends App {
   render() {
     // console.log('APP PROPS',this.props);
     const { Component, pageProps, config, router } = this.props
-    config.layout_config.header.title = this.getTitle().title;
+    const appConf = config.app_config;
+    const layoutConf = config.layout_config;
+    appConf.title = this.getTitle().title;
     return (
       <React.Fragment>
-        <AppHead {...this.getTitle()} />
-        <Layout {...config}>
+        <AppHead {...appConf} />
+        <Layout {...layoutConf} {...appConf}>
           <Component {...pageProps} />
         </Layout>
       </React.Fragment>

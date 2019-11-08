@@ -3,7 +3,7 @@
         "displayBodyText":true,
         "node_path":["./","./src","./src/components","./src/components/core"],
         "showLayoutProps":"all",
-        "global_Styles":[
+        "styles":[
             "https://fonts.googleapis.com/css?family=Kanit|Lato&display=swap"
         ]
     },
