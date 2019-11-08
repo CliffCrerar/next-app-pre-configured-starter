@@ -1,0 +1,10 @@
+/*****************************************************************************************
+RUN TIME STYLES
+
+This file is created at run time and the content is determined by the styles attribute
+in the src/config/conf.json file modifying this file with css will have no effect. as 
+it is the result of a creation procedure triggered in the next.config.js. 
+
+Only modifying the styles attribute in the src/config/conf.json are applied by means of
+this run time file.
+*****************************************************************************************/

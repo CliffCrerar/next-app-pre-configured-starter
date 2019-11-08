@@ -6,7 +6,7 @@
 const
     confJSON = require('./conf.json'),
     nodePath = require('./_node-path'),
-    writeStyles = require('./_write-styles'),
+    { styles } = confJSON.app_config,
     configureHost = require('./_host');
 
-module.exports = { confJSON, nodePath, configureHost }
+module.exports = { confJSON, nodePath, configureHost, styles }

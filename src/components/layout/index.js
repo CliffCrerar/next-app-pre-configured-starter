@@ -1,7 +1,6 @@
 /**
  * App Layout
  */
-
 import { withRouter } from 'next/router'
 import Nav from 'layout/1_nav';
 import Header from 'layout/2_header';

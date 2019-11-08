@@ -4,7 +4,9 @@
         "node_path":["./","./src","./src/components","./src/components/core"],
         "showLayoutProps":"all",
         "styles":[
+            "default-styles.css",
             "https://fonts.googleapis.com/css?family=Kanit|Lato&display=swap"
+            
         ]
     },
     "layout_config": {
