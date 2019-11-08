@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import './header.scss';
 export default class Header extends Component {
     constructor(props) {
-        console.log('HEADER props: ', props);
+        // console.log('HEADER props: ', props);
         super(props)
         this.state = { classes: this.props.classes }
     }
