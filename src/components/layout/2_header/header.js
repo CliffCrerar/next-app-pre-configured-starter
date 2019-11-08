@@ -10,9 +10,11 @@ export default class Header extends Component {
     }
     render() {
         return (
-            <header style={this.state.classes}>
-                LAYOUT COMPONENT: header
+            <header style={this.state.classes.main}>
+                <div>
+                    LAYOUT COMPONENT: header
                 <h1>{this.props.title}</h1>
+                </div>
             </header>
         )
     }

@@ -12,7 +12,7 @@ export default class Nav extends Component {
   navLinks;
   constructor(props) {
     super(props)
-    console.log('NAV props: ', props);
+    // console.log('NAV props: ', props);
     // this.navLinks = this.props.config.links;
     this.state = {
       classes: this.props.classes,
@@ -28,7 +28,7 @@ export default class Nav extends Component {
   render() {
 
     return (
-      <nav style={this.state.classes}>
+      <nav style={this.state.classes.main}>
         <h4>{this.handleBrandDisplay()}</h4>
         <div>
           <NavBarLinks links={this.props.links} />

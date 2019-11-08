@@ -1,6 +1,7 @@
 {
     "app_config": {
-        "node_path":["./","./src","./src/components"],
+        "displayBodyText":true,
+        "node_path":["./","./src","./src/components","./src/components/core"],
         "showLayoutProps":"all",
         "global_Styles":[
             "https://fonts.googleapis.com/css?family=Kanit|Lato&display=swap"
@@ -11,7 +12,7 @@
             "useBrandOrTitle":"brand",
             "brand":"USING BRAND",
             "classes": {
-                "display": "flex"
+                "main":{"display": "flex"}
             },
             "links": [
                 {
@@ -34,19 +35,19 @@
                 }
             ]
         },
-        "header": {
+        "header": {            
             "classes": {
-                "display": "block"
+                "main":{"display": "block"}
             }
         },
         "main": {
             "classes": {
-                "display": "block"
+                "main":{"display": "block"}
             }
         },
         "footer": {
             "classes": {
-                "display": "block"
+                "main":{"display": "block"}
             }
         }
     }

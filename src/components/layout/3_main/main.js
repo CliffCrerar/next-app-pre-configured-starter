@@ -10,7 +10,7 @@ class Main extends Component {
         const { Content } = this.props
 
         return (
-            <main style={this.state.classes}>
+            <main style={this.state.classes.main}>
                 LAYOUT COMPONENT: MAIN<br />
                 <div className="main-content-temp">Main content:
                 <div className="main-content-box">

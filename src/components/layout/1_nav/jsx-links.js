@@ -4,7 +4,7 @@
  */
 import Link from 'next/link';
 export default ({ links }) => {
-    console.log('links: ', links);
+    // console.log('JSX links: ', links);
     return (
         <ul>
             {links.map((link, i) => <li key={`nav-link-${i}`}>
