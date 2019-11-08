@@ -1,4 +1,7 @@
+export default (props) => {
+    console.log('HOME props: ', props);
 
-
-const Home = () => <div className="test-class">HOME</div>
-export default Home
+    return (
+        <section>HOME</section>
+    )
+}

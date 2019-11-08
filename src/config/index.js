@@ -3,9 +3,9 @@
  * INFO: Index file for config file and procedures under different conditions
  */
 
-const 
-    conf = require('./conf.json'),
+const
+    confJSON = require('./conf.json'),
     nodePath = require('./_node-path'),
     configureHost = require('./_host');
 
-module.exports = {conf,nodePath,configureHost}
+module.exports = { confJSON, nodePath, configureHost }

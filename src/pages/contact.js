@@ -1,0 +1,1 @@
+export default () => <section>contact</section>

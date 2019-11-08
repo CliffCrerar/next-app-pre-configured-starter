@@ -3,11 +3,13 @@
  */
 import React from 'react';
 import Head from 'next/head';
-export default () => {
+export default (props) => {
+    console.log('HEAD props: ', props);
     return (
         <Head>
-            <title>Home</title>
+            <title>{props.title}</title>
             <link rel='icon' href='/favicon.ico' />
         </Head>
     )
 }
+

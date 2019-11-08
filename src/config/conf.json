@@ -1,19 +1,36 @@
 {
     "app_config": {
-        "node_path":["./","./src","./src/components"]
+        "node_path":["./","./src","./src/components"],
+        "showLayoutProps":"all",
+        "global_Styles":[
+            "https://fonts.googleapis.com/css?family=Kanit|Lato&display=swap"
+        ]
     },
     "layout_config": {
         "nav": {
-            "active": true,
+            "useBrandOrTitle":"brand",
+            "brand":"USING BRAND",
             "classes": {
-                "display": "block"
+                "display": "flex"
             },
             "links": [
                 {
-                    "route": "",
-                    "nav-label": "",
-                    "page-title": "",
-                    "page-as": ""
+                    "href": "/",
+                    "label": "Home",
+                    "as": "home",
+                    "title": "Home Page"
+                },
+                {
+                    "href": "/about",
+                    "label": "About",
+                    "as": "About",
+                    "title": "About This"
+                },
+                {
+                    "href": "/contact",
+                    "label": "Contact",
+                    "as": "contact",
+                    "title": "Contacts Test Page"
                 }
             ]
         },

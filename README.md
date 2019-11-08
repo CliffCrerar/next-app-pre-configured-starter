@@ -1,6 +1,6 @@
 # Next.js website starter
 
-> THIS PROJECT IS UNDER DEVELOPMENT
+> THIS PROJECT IS ALPHA STAGE 
 
 ## Starter template for next.js pre-configured with:
 

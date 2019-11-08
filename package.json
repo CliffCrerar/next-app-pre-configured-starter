@@ -16,10 +16,11 @@
     "next": "9.1.2",
     "next-compose-plugins": "^2.2.0",
     "node-sass": "^4.13.0",
+    "prop-types": "^15.7.2",
     "react": "16.11.0",
     "react-dom": "16.11.0"
   },
-  "description": "Next.js pre-configured with sass, sourcemaps, dotenv, compose-plugins, markdown component that calls markdown files from the next.js api, markdown component is configured to use attributes {style=\"bakcground: red\"}, as well as reading normal html inline. HTML can be turned on or off as a component setting, see readme for more details.",
+  "description": "Next.js pre-configured with sass, sourcemaps, dotenv, compose-plugins, markdown component that calls markdown files from the next.js api, markdown component is configured to use attributes {style=\"background: red\"}, as well as reading normal html inline. HTML can be turned on or off as a component setting, see readme for more details.",
   "main": "next.config.js",
   "devDependencies": {},
   "repository": {
