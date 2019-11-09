@@ -34,7 +34,6 @@ body {
         }
         header{
             text-align: center;
-            background: yellow;
             div{
                 position: relative;
                 h1{
@@ -61,16 +60,30 @@ body {
     }
 }
 
-a{
+nav a{
     text-decoration: none;
     color: inherit
 }
 
-a:hover{
+nav a:hover{
     color:blueviolet
+}
+
+.md-links{
+    font-size: 3em;
 }
 
 h1,h2,h3,h4,h5,h6,p{
     font-family: Kanit;
     margin: 0;
+}
+
+a,p,div{
+    font-family: lato;
+}
+
+hr{
+    border: 0.5px solid rgba(0, 0, 0, 0.082);
+    position: relative;
+    padding: 0 20px;
 }

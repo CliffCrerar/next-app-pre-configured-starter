@@ -1,3 +1,3 @@
-import MatNextMarkdown from './main';
+import Markdown from './main';
 
-export default MatNextMarkdown;
+export default Markdown;

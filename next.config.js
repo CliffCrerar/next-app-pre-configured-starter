@@ -18,7 +18,7 @@ console.log('|------------------------------------------------|');
 console.log('|--> MODE: ', mode ? 'Development' : 'Production'  );
 console.log('|------------------------------------------------|');
 dotenv.config(); // initialize .env file
-require('./src/utils/run-time-styles')(styles)
+require('./src/utils/built-in/run-time-styles')(styles)
 module.exports = withPlugins(plugins, {
   target: mode ? 'server' : 'serverless',
   webpack: config => {

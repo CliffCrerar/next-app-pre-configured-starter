@@ -16,9 +16,11 @@ export default class Nav extends Component {
     // this.navLinks = this.props.config.links;
     this.state = {
       classes: this.props.classes,
+      selectedLink: this.props.router.route
     }
     this.handleBrandDisplay();
   }
+  
   handleBrandDisplay = () => {
     switch (this.props.useBrandOrTitle) {
       case 'brand': return this.props.brand;
@@ -31,7 +33,7 @@ export default class Nav extends Component {
       <nav style={this.state.classes.main}>
         <h4>{this.handleBrandDisplay()}</h4>
         <div>
-          <NavBarLinks links={this.props.links} />
+          <NavBarLinks links={this.props.links} selected={this.state.selectedLink} />
         </div>
       </nav>
     )

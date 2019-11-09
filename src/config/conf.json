@@ -1,20 +1,42 @@
 {
+    "markdown_conf": {
+        "use-common-mark":false,
+        "skip-Html": false,
+        "all-links": false,
+
+        "link_attributes": [{
+            "use-pattern":false,
+            "pattern":"/^https?:\/\//",
+            "attr": {
+                "target": "_blank",
+                "rel": "noopener",
+                "className":"md-links"
+            }
+        }]
+    },
     "app_config": {
-        "displayBodyText":true,
-        "node_path":["./","./src","./src/components","./src/components/core"],
-        "showLayoutProps":"all",
-        "styles":[
-            "default-styles.css",
+        "displayBodyText": true,
+        "node_path": [
+            "./",
+            "./src",
+            "./src/components",
+            "./src/components/core",
+            "./src/utils/built-in",
+            "./src/styles"
+        ],
+        "showLayoutProps": "all",
+        "styles": [
             "https://fonts.googleapis.com/css?family=Kanit|Lato&display=swap"
-            
         ]
     },
     "layout_config": {
         "nav": {
-            "useBrandOrTitle":"brand",
-            "brand":"USING BRAND",
+            "useBrandOrTitle": "brand",
+            "brand": "USING BRAND",
             "classes": {
-                "main":{"display": "flex"}
+                "main": {
+                    "display": "flex"
+                }
             },
             "links": [
                 {
@@ -34,23 +56,39 @@
                     "label": "Contact",
                     "as": "contact",
                     "title": "Contacts Test Page"
+                },
+                {
+                    "href":"page-error",
+                    "label":"Page error",
+                    "as":"page error",
+                    "title":"THIS IS AN ERROR!"
                 }
             ]
         },
-        "header": {            
+        "header": {
             "classes": {
-                "main":{"display": "block"}
+                "main": {
+                    "display": "block"
+                }
             }
         },
         "main": {
             "classes": {
-                "main":{"display": "block"}
+                "main": {
+                    "display": "block"
+                }
             }
         },
         "footer": {
             "classes": {
-                "main":{"display": "block"}
+                "main": {
+                    "display": "block"
+                }
             }
         }
+    },
+    "dev-config":{
+        "display_App_component_mount":true,
+        "display_App_component_update":true
     }
 }
