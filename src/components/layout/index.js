@@ -7,7 +7,7 @@ import Header from 'layout/2_header';
 import Main from 'layout/3_main';
 import Footer from 'layout/4_footer';
 const Layout = (props) => {
-    console.log('LAYOUT props: ', props);
+    // console.log('LAYOUT props: ', props);
     const { router, children, nav, header, title, main, footer, error } = props;
     
     return (
