@@ -5,7 +5,7 @@
 require('./src/config').nodePath();
 // declare variables call plugins;
 const
-  {configureHost} = require('./src/config');
+  {configureHost,styles} = require('./src/config');
   withPlugins = require('next-compose-plugins'),
   sourceMaps = require('@zeit/next-source-maps'),
   sass = require('@zeit/next-sass'),
@@ -13,11 +13,17 @@ const
   webpack = require('webpack'),
   dotenv = require('dotenv'),
   plugins = [[sass], [sourceMaps]];
+  fs=require('fs');
  
 console.log('|------------------------------------------------|');
 console.log('|--> MODE: ', mode ? 'Development' : 'Production'  );
 console.log('|------------------------------------------------|');
+
+/*------------------BUILD CONFIGURATION-----------------------------*/
 dotenv.config(); // initialize .env file
+require('./src/utils/built-in/run-time-styles')(styles);
+/*------------------BUILD CONFIGURATION-----------------------------*/
+
 module.exports = withPlugins(plugins, {
   target: mode ? 'server' : 'serverless',
   webpack: config => {

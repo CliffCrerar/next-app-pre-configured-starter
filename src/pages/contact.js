@@ -1,9 +1,8 @@
-
 import Markdown from 'markdown'
-export default (props) => {
+export default () => {
     return (
         <section>
-            <Markdown>home-page-markdown</Markdown>
+            <Markdown>contacts-page</Markdown>
         </section>
     )
 }

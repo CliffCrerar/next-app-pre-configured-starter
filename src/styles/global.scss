@@ -1,0 +1,132 @@
+/*
+    GLOBAL STYLES
+    INFO: Write all global styles in this file
+*/
+
+$appMinHeight: 100vh;
+$appMinWidth: 100vw;
+
+:before,
+:after,
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #FAFAFA
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: auto;
+    min-height: $appMinHeight;
+    min-width: $appMinWidth;
+    overflow-x: hidden;
+
+    #__next {
+        nav {
+            align-items: center;
+            padding: 0 10px;
+            ul {
+                list-style: none;
+                display: flex;
+
+                li {
+                    padding-left: 1vw;
+                }
+            }
+        }
+
+        header {
+            text-align: center;
+
+            div {
+                position: relative;
+
+                h1 {
+                    padding: 1em 0;
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        main {
+            width: 100%;
+            min-height: $appMinHeight;
+            section {
+                display: block;
+                max-width: 600px;
+                margin: auto !important;
+                height: auto;
+                margin: 5vh 0;
+            }
+        }
+
+        min-height: $appMinHeight;
+        min-width: $appMinWidth;
+
+        footer {
+            height: 100px;
+            position: relative;
+            bottom: 0;
+        }
+    }
+
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit
+}
+
+nav a:hover {
+    color: blueviolet
+}
+
+.md-links {
+    font-size: 3em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Kanit;
+    margin: 0;
+}
+
+a,
+p,
+div {
+    font-family: lato;
+    margin: 0;
+}
+
+hr {
+    border: 0.5px solid rgba(0, 0, 0, 0.082);
+    position: relative;
+    padding: 0 20px;
+}
+
+blockquote {
+    padding: 20px 20px 20px 30px;
+    border-left: 2px solid rgb(80, 80, 80);
+    background: rgb(201, 201, 201);
+    color: rgba(0, 0, 0, 0.9);
+    margin: 4vh 0;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a {
+        margin: 0;
+    }
+}

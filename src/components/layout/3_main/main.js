@@ -1,28 +1,36 @@
+/**
+ * MAIN Layout Element
+ */
 import React, { Component } from 'react';
-
 class Main extends Component {
     constructor(props) {
         super(props)
-        const classes={
-            showElement: {
-                display: "block"
-            }
+        this.state = {
+            classes: this.props.classes,
+            error: this.props.error
         }
-        this.state = {classes}
     }
+    toggleDisplayStack = () => {
+        // this.state.classes
+        console.log('this.state.classes: ', this.state.classes);
+        const currentState = this.state.classes.errorStackStyle;
+        if (currentState === 'none') {
+            this.setState({ classes: { errorStackStyle: 'block' } });
+        } else {
+            this.setState({ classes: { errorStackStyle: 'none' } });
+        }
+    }
+
     render() {
+        const { Content } = this.props
         return (
-            <main style={this.state.classes.showElement}>
-                LAYOUT COMPONENT: MAIN<br />
-                <div className="main-content-temp">Main content:
-                <div className="main-content-box">
-                        {this.props.content}
-                    </div>
-                </div>
+            <main style={this.state.classes.main}>
+                <Content />
             </main>
         )
     }
 }
+
 
 export default Main
 

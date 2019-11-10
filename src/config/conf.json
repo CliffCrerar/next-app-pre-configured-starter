@@ -1,36 +1,118 @@
 {
+    "markdown_config": {
+        "markdown-file-paths":["src/config/defaults/test-markdown-dirs"],
+        "show-api-request-log":false,
+        "use-common-mark":false,
+        "parse-html": true,
+        "all-links": false,
+        "close-single-tag": false,
+        "break-tag-linebreaks": true,
+        "typographer":true,
+        "link_attributes": [{
+            "use-pattern":false,
+            "pattern":"/^https?:\/\//",
+            "attr": {
+                "target": "_blank",
+                "rel": "noopener",
+                "className":"md-links"
+            }
+        }],
+        "page-map":[
+            {"requestedAs":"home-page-markdown","located":"./README.md"}
+        ]
+    },
     "app_config": {
-        "node_path":["./","./src","./src/components"]
+        "displayBodyText": false,
+        "node_path": [
+            "./",
+            "./src",
+            "./src/components",
+            "./src/components/core",
+            "./src/utils/built-in",
+            "./src/styles"
+        ],
+        "showLayoutProps": "all",
+        "styles": [
+            "https://fonts.googleapis.com/css?family=Kanit|Lato&display=swap"
+        ]
     },
     "layout_config": {
+        "general":{
+            "separate-layout-with-hr":true
+        },
         "nav": {
-            "active": true,
+            "useBrandOrTitle": "brand",
+            "brand": "USING BRAND",
             "classes": {
-                "display": "block"
+                "main": {
+                    "display": "flex"
+                },
+                "navbar-left":{
+                    "textAlign":"left"
+                },
+                "navbar-right":{
+                    "flex":1,
+                    "textAlign":"right",
+                    "paddingRight":"20px"
+                }
             },
             "links": [
                 {
-                    "route": "",
-                    "nav-label": "",
-                    "page-title": "",
-                    "page-as": ""
+                    "href": "/",
+                    "label": "Home",
+                    "as": "home",
+                    "title": "Home Page"
+                },
+                {
+                    "href": "/about",
+                    "label": "About",
+                    "as": "About",
+                    "title": "About This"
+                },
+                {
+                    "href": "/contact",
+                    "label": "Contact",
+                    "as": "contact",
+                    "title": "Contacts Test Page"
+                },
+                {
+                    "href": "/test-dirs",
+                    "label": "Test Directories",
+                    "as": "test-dir",
+                    "title": "Testing directories"
+                },
+                {
+                    "href":"page-error",
+                    "label":"Page error",
+                    "as":"page error",
+                    "title":"THIS IS AN ERROR!"
                 }
             ]
         },
         "header": {
             "classes": {
-                "display": "block"
+                "main": {
+                    "display": "block"
+                }
             }
         },
         "main": {
             "classes": {
-                "display": "block"
+                "main": {
+                    "display": "block"
+                }
             }
         },
         "footer": {
             "classes": {
-                "display": "block"
+                "main": {
+                    "display": "block"
+                }
             }
         }
+    },
+    "dev-config":{
+        "display_App_component_mount":true,
+        "display_App_component_update":true
     }
 }

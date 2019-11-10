@@ -1,12 +1,23 @@
 // TEST
 main{
-    background: red;
+    .display-error{
+        border-left: 2px solid maroon;
+        background:rgb(248, 167, 167);
+        padding: 2vw;
+        h1,h2, h3,h4,h5,p,a,li{
+            color: maroon;
+        }
+        p{
+            margin: 2vh 0;
+        }
+    }
 }
 
 .main-content-box{
-    border: 1px solid black;
+    // border: 1px solid black;
 }
 
 .main-content-temp{
-    padding-left: 5vw;
+    // padding-left: 5vw;
 }
+
