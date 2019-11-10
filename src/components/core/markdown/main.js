@@ -8,7 +8,7 @@ class MarkdownFileReaderComponent extends Component {
 	/* CLASS CONSTRUCTOR */
 	constructor(props) {
 		super(props)
-		// console.log('props: ', props);
+		console.log('props: ', props);
 		this.state = {
 			md: this.parseMarkdownToHtml('# Loading content . . .')
 		}
