@@ -5,7 +5,6 @@ import { Parser } from 'html-to-react';
 import propTypes from 'prop-types';
 const html = new Parser()
 class MarkdownFileReaderComponent extends Component {
-
 	/* CLASS CONSTRUCTOR */
 	constructor(props) {
 		super(props)
@@ -25,6 +24,13 @@ class MarkdownFileReaderComponent extends Component {
 		// console.log('response: ', response);
 		if (response.ok) {
 			this.setStateContent(response.status)
+			response.blob()
+				.then(blob=>
+					blob.text().then(text=>{
+						const content = text;
+						this.setStateContent(content);
+					})
+			);
 		} else {
 			const
 				msg = `### The requested file '${this.query}' does not exist`,
@@ -35,7 +41,7 @@ class MarkdownFileReaderComponent extends Component {
 	}
 	setStateError = (msg)=> this.setState({md: ((self,msgToParse) => (<div className="display-error">
 				{self.parseMarkdownToHtml(msgToParse)}</div>))(this,msg)});
-	setStateContent = (content) => this.setState({md:content});
+	setStateContent = (content) => this.setState({md:this.parseMarkdownToHtml(`${content}`)});
 	componentDidMount = () => this.httpGetMdFile(this.query, this.handleHttpGetMdFile);
 	parseMarkdownToHtml = (mdText) => this.toReact.parse(this.markdown.render(mdText));
 	render = () => <React.Fragment>{this.state.md}</React.Fragment>
@@ -54,7 +60,6 @@ MarkdownFileReaderComponent.defaultProps = {
 	getMarkDownIt: require('./_md-it'),
 	html: html
 }
-
 
 export default MarkdownFileReaderComponent;
 
