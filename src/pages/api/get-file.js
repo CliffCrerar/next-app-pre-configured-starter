@@ -9,6 +9,7 @@ export default (req, res) => router.call(this, req, res);
 // console.log('markdown: ', markdown_conf);
 const filePaths = markdown_conf['markdown-file-paths'];
 const showReqLog = markdown_conf['show-api-request-log'];
+const pageMap = markdown_conf['page-map'];  
 let filePath = null;
 
 
@@ -20,11 +21,15 @@ function router(req, res) {
       res.status(status).send(body);
     })
   } catch (err) {
+    console.error('ReadFile Error:', err);
     res.status(500).send(err);
   }
 }
 
 function findFile(fileName) {
+  if(checkIfMapped(fileName)){
+    return filePath;
+  };
   const file = fileName + '.md';
   const paths = filePaths;
   // console.log('paths: ', paths);
@@ -37,6 +42,17 @@ function findFile(fileName) {
     }
   }
   return filePath;
+}
+  
+function checkIfMapped(fileName){
+  const fileMapping = pageMap.filter(p=>p.requestedAs===fileName);
+  console.log('fileMapping: ', fileMapping);
+  if(fileMapping.length > 0){
+    filePath = fileMapping[0].located;
+    return filePath;
+  } else {
+    return null;
+  }
 }
 
 function readFile(fileName, callback) {

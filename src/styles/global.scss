@@ -61,6 +61,7 @@ body {
             bottom: 0;
         }
     }
+
 }
 
 nav a{
@@ -89,4 +90,16 @@ hr{
     border: 0.5px solid rgba(0, 0, 0, 0.082);
     position: relative;
     padding: 0 20px;
+}
+
+blockquote{
+    padding: 20px 20px 20px 30px;
+    border-left: 2px solid rgb(80, 80, 80);
+    background: rgb(201, 201, 201);
+    color: rgba(0, 0, 0, 0.9);
+    margin: 4vh 0;
+    h1,h2,h3,h4,h5,h6,p,a{
+        margin: 0;
+    }
+
 }

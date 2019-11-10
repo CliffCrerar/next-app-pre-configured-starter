@@ -1,6 +1,5 @@
 {
     "markdown_conf": {
-        
         "markdown-file-paths":["public/markdown"],
         "show-api-request-log":false,
         "use-common-mark":false,
@@ -18,10 +17,13 @@
                 "className":"md-links"
             }
         }],
-        "error-instruction":"Please ensure that the file that is being called exists in src/pages/api/files"
+        "error-instruction":"Please ensure that the file that is being called exists in src/pages/api/files",
+        "page-map":[
+            {"requestedAs":"test-markdown","located":"./README.md"}
+        ]
     },
     "app_config": {
-        "displayBodyText": true,
+        "displayBodyText": false,
         "node_path": [
             "./",
             "./src",
