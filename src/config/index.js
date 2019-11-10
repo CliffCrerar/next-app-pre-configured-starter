@@ -8,7 +8,8 @@ const
     confJSON = require('./defaults')(conf),
     nodePath = require('../utils/built-in/to-config/_node-path'),
     configureHost = require('../utils/built-in/to-config/_host'),
-    { styles, markdown } = confJSON.app_config;
+    { styles,  } = confJSON.app_config,
+    markdown_conf = confJSON.markdown_conf;
     
 
-module.exports = { confJSON, nodePath, configureHost, styles, markdown };
+module.exports = { confJSON, nodePath, configureHost, styles, markdown_conf };

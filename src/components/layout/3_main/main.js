@@ -50,13 +50,13 @@ class Main extends Component {
 
         return (
             <main style={this.state.classes.main}>
-                LAYOUT COMPONENT: MAIN<br />
-                <div className="main-content-temp">Main content:
+                {/* LAYOUT COMPONENT: MAIN<br /> */}
+                {/* <div className="main-content-temp">Main content: */}
                     <div className="main-content-box">
                         {/* {this.DisplayPage.call(this)} */}
                         <Content />
                     </div>
-                </div>
+                {/* </div> */}
             </main>
         )
     }

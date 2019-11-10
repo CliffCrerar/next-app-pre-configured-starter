@@ -1,31 +1,43 @@
-export default (conf)=> {
-    console.log('MD conf: ', conf);
+export default (conf) => {
+    // console.log('MD conf: ', conf);
 
-    const tempLinkAttrConf={
+    const tempLinkAttrConf = {
         attrs: {
             target: '_blank',
             rel: 'noopener'
-          }
+        }
     }
 
-    function linkAttributeOptions(opts=''){
-        console.log('linkAttributeOptions opts: ', opts);
-        return opts
+    function linkAttributeOptions(opts = '') {
+
+        // console.log('linkAttributeOptions opts: ', opts);
+        return opts.map(o => {
+            if (o['use-pattern']) {
+                return {
+                    pattern: o.pattern,
+                    attr: o.attr
+                }
+            } else {
+                return { attr: o.attr };
+            }
+        })
     }
 
-    function markDownItOptions(opts='') {
-        console.log('markDownItOptions opts: ', opts);
+
+    function markDownItOptions(opts) {
+        // console.log('markDownItOptions opts: ', opts);
+
         return {
-            html: false,        // Enable HTML tags in source
-            xhtmlOut: false,        // Use '/' to close single tags (<br />).
+            html: opts['parse-html'],        // Enable HTML tags in source
+            xhtmlOut: opts['close-single-tag'],        // Use '/' to close single tags (<br />).
             // This is only for full CommonMark compatibility.
-            breaks: false,        // Convert '\n' in paragraphs into <br>
+            breaks: opts['break-tag-linebreaks'],        // Convert '\n' in paragraphs into <br>
             langPrefix: 'language-',  // CSS language prefix for fenced blocks. Can be
             // useful for external highlighters.
-            linkify: false,        // Autoconvert URL-like text to links
+            linkify: opts['all-links'],        // Autoconvert URL-like text to links
 
             // Enable some language-neutral replacement + quotes beautification
-            typographer: false,
+            typographer: opts["typographer"],
 
             // Double + single quotes replacement pairs, when typographer enabled,
             // and smartquotes on. Could be either a String or an Array.
@@ -41,6 +53,9 @@ export default (conf)=> {
         }
     }
 
-    return { markDownItOptions: markDownItOptions(), linkAttributeOptions:linkAttributeOptions(tempLinkAttrConf)};
+    return {
+        markDownItOptions: markDownItOptions(conf),
+        linkAttributeOptions: linkAttributeOptions(conf.link_attributes)
+    };
 
 }

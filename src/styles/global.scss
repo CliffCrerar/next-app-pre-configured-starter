@@ -48,6 +48,9 @@ body {
             width: 100%;
             min-height: $appMinHeight;
             height: auto;
+            section{
+                margin: 5vh 0;
+            }
         }
         min-height: $appMinHeight;
         min-width: $appMinWidth;

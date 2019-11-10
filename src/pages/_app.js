@@ -66,11 +66,11 @@ class NextApp extends App {
   render() {
 
     // console.log('APP PROPS',this.props);
+    let { Component, pageProps, config } = this.props;
     const
-      { Component, pageProps, config } = this.props,
       appConf = config.app_config,
       layoutConf = config.layout_config;
-
+      pageProps.conf = config;
       const AppComponents = ()=>(
         <React.Fragment>
           <AppHead {...appConf} />

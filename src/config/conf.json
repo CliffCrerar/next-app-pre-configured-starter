@@ -1,9 +1,13 @@
 {
     "markdown_conf": {
+        
+        "markdown-file-paths":["public/markdown"],
         "use-common-mark":false,
-        "skip-Html": false,
+        "parse-html": true,
         "all-links": false,
-
+        "close-single-tag": false,
+        "break-tag-linebreaks": true,
+        "typographer":true,
         "link_attributes": [{
             "use-pattern":false,
             "pattern":"/^https?:\/\//",
@@ -12,7 +16,8 @@
                 "rel": "noopener",
                 "className":"md-links"
             }
-        }]
+        }],
+        "error-instruction":"Please ensure that the file that is being called exists in src/pages/api/files"
     },
     "app_config": {
         "displayBodyText": true,

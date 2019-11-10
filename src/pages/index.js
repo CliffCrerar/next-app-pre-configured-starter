@@ -1,11 +1,11 @@
 
 import Markdown from 'markdown'
 export default (props) => {
-    console.log('HOME props: ', props);
+    // console.log('HOME props: ', props);
 
     return (
-        <section>HOME
-            <Markdown>test-markdown</Markdown>
+        <section>
+            <Markdown conf={props.conf}>test-markdown</Markdown>
         </section>
     )
 }
