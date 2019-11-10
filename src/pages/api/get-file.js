@@ -6,13 +6,14 @@ import { markdown_conf } from 'config';
 import fs from 'fs';
 import path from 'path';
 export default (req, res) => router.call(this, req, res);
-console.log('markdown: ', markdown_conf);
+// console.log('markdown: ', markdown_conf);
 const filePaths = markdown_conf['markdown-file-paths'];
+const showReqLog = markdown_conf['show-api-request-log'];
 let filePath = null;
 
 
 function router(req, res) {
-  reqLog(req)
+  showReqLog && reqLog(req)
   filePath = null;
   try {
     readFile.call(this, req.query.file, (status, body) => {
@@ -26,7 +27,7 @@ function router(req, res) {
 function findFile(fileName) {
   const file = fileName + '.md';
   const paths = filePaths;
-  console.log('paths: ', paths);
+  // console.log('paths: ', paths);
 
   for (let i = 0; i < paths.length; i++) {
     const checkPath = paths[i];

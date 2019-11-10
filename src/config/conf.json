@@ -2,6 +2,7 @@
     "markdown_conf": {
         
         "markdown-file-paths":["public/markdown"],
+        "show-api-request-log":false,
         "use-common-mark":false,
         "parse-html": true,
         "all-links": false,
