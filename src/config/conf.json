@@ -1,6 +1,6 @@
 {
-    "markdown_conf": {
-        "markdown-file-paths":["public/markdown"],
+    "markdown_config": {
+        "markdown-file-paths":["src/config/defaults/test-markdown-dirs"],
         "show-api-request-log":false,
         "use-common-mark":false,
         "parse-html": true,
@@ -17,9 +17,8 @@
                 "className":"md-links"
             }
         }],
-        "error-instruction":"Please ensure that the file that is being called exists in src/pages/api/files",
         "page-map":[
-            {"requestedAs":"test-markdown","located":"./README.md"}
+            {"requestedAs":"home-page-markdown","located":"./README.md"}
         ]
     },
     "app_config": {
@@ -38,12 +37,23 @@
         ]
     },
     "layout_config": {
+        "general":{
+            "separate-layout-with-hr":true
+        },
         "nav": {
             "useBrandOrTitle": "brand",
             "brand": "USING BRAND",
             "classes": {
                 "main": {
                     "display": "flex"
+                },
+                "navbar-left":{
+                    "textAlign":"left"
+                },
+                "navbar-right":{
+                    "flex":1,
+                    "textAlign":"right",
+                    "paddingRight":"20px"
                 }
             },
             "links": [
@@ -64,6 +74,12 @@
                     "label": "Contact",
                     "as": "contact",
                     "title": "Contacts Test Page"
+                },
+                {
+                    "href": "/test-dirs",
+                    "label": "Test Directories",
+                    "as": "test-dir",
+                    "title": "Testing directories"
                 },
                 {
                     "href":"page-error",

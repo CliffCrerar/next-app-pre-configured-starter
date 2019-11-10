@@ -5,7 +5,7 @@
 require('./src/config').nodePath();
 // declare variables call plugins;
 const
-  {configureHost,styles,markdown_conf} = require('./src/config');
+  {configureHost,styles} = require('./src/config');
   withPlugins = require('next-compose-plugins'),
   sourceMaps = require('@zeit/next-source-maps'),
   sass = require('@zeit/next-sass'),
@@ -18,9 +18,12 @@ const
 console.log('|------------------------------------------------|');
 console.log('|--> MODE: ', mode ? 'Development' : 'Production'  );
 console.log('|------------------------------------------------|');
+
+/*------------------BUILD CONFIGURATION-----------------------------*/
 dotenv.config(); // initialize .env file
 require('./src/utils/built-in/run-time-styles')(styles);
-// fs.writeFileSync('./src/pages/api/md-config.json',JSON.stringify(markdown_conf),'utf8')
+/*------------------BUILD CONFIGURATION-----------------------------*/
+
 module.exports = withPlugins(plugins, {
   target: mode ? 'server' : 'serverless',
   webpack: config => {

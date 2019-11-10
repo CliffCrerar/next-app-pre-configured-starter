@@ -1,10 +1,8 @@
 import Markdown from 'markdown'
-export default (props) => {
-    // console.log('HOME props: ', props);
-
+export default () => {
     return (
         <section>
-            <Markdown conf={props.conf}>contacts-page</Markdown>
+            <Markdown>contacts-page</Markdown>
         </section>
     )
 }

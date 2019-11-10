@@ -4,11 +4,12 @@
 
 ## Starter template for next.js pre-configured with:
 
-### Plugins
+### Pre-configured Plugins
 
 - next-compose-plugins
 - @zeit/next-source-maps
 - @zeit/next-sass
+- Markdown
 - dotenv
 
 ### Layout
@@ -17,8 +18,21 @@ Layout navbar has already been configured see ./components/layout
 
 ### Markdown
 
-~~A component named `MatNextMarkdown` is the component that calls to the API and retrieves the .md file.
-pass the md filename without the extension to this components source attribute and the API will do the rest.~~
+This application is pre-configured with a component with options to read and display markdown files via a React component that calls the markdown files from the application server using the `next.js` built in api functionality.
+
+##### Using the built in markdown plugin
+
+```javascript
+import Markdown from 'markdown';
+export default (props) => {
+    return (
+        <section>
+            <Markdown conf={props.conf}>home-page-markdown</Markdown>
+        </section>
+    )
+}
+```
+
 
 Markdown options configures in the `markdown` attribute:
 

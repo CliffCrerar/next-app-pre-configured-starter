@@ -1,10 +1,14 @@
 // TEST
 main{
     .display-error{
+        border-left: 2px solid maroon;
         background:rgb(248, 167, 167);
         padding: 2vw;
-        h1, h3{
+        h1,h2, h3,h4,h5,p,a,li{
             color: maroon;
+        }
+        p{
+            margin: 2vh 0;
         }
     }
 }

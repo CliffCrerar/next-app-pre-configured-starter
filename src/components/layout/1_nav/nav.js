@@ -7,7 +7,9 @@
  *  TODO: IF useBrandOrTitle set to "title" then dynamically display "title" attribute per current link
  */
 import React, { Component } from 'react';
-import NavBarLinks from './jsx-links';
+import NavBarBrand from './_navbar-brand';
+import NavBarLeft from './_navbar-left';
+import NavBarRight from './_navbar-right';
 export default class Nav extends Component {
   navLinks;
   constructor(props) {
@@ -18,23 +20,25 @@ export default class Nav extends Component {
       classes: this.props.classes,
       selectedLink: this.props.router.route
     }
-    this.handleBrandDisplay();
+    // this.handleBrandDisplay();
   }
-  
+
   handleBrandDisplay = () => {
     switch (this.props.useBrandOrTitle) {
       case 'brand': return this.props.brand;
+      case 'title': return this.props.title;
+      case 'none': return ''
     }
-    return this.state.brandDisplay;
   }
   render() {
-
     return (
       <nav style={this.state.classes.main}>
-        <h4>{this.handleBrandDisplay()}</h4>
-        <div>
-          <NavBarLinks links={this.props.links} selected={this.state.selectedLink} />
-        </div>
+        <NavBarBrand brand={this.handleBrandDisplay()} />
+        <NavBarLeft
+          classes={this.state.classes}
+          links={this.props.links}
+          selected={this.state.selected} />
+        <NavBarRight classes={this.state.classes['navbar-right']} />
       </nav>
     )
   }

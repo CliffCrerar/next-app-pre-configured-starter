@@ -11,21 +11,22 @@
 module.exports = function(conf) {
     Object.entries(conf).forEach(
         l1Conf=>{
-            // console.log('l1Conf: ', l1Conf);
             l1ConfDesc = l1Conf[0];
-            l1ConfSet = l1Conf[1]
-            
-            // console.log('l1ConfDesc: ', l1ConfDesc);
-            // console.log('l1ConfSet: ', l1ConfSet);
+            l1ConfSet = l1Conf[1];
             switch(l1ConfDesc){
-                case 'layout_config':handleLayoutConfig(l1ConfSet);
+                case 'layout_config':handleLayoutConfig(l1ConfSet);break;
+                case 'markdown_config': handleMarkdownConfig(l1ConfSet);break;
             }
         });
-
+        // Assign Layout config defaults
         function handleLayoutConfig(layoutConf){
             // console.log('handleLayoutConfig: ', layoutConf);
             layoutConf.main.classes.errorStackStyle = {display: 'none'}            
         }
-
+        // Assign markdown config defaults
+        function handleMarkdownConfig(markdownConf){
+            // console.log('markdownConf: ', markdownConf);
+            markdownConf['markdown-file-paths'].push('src/md-files')
+        }
         return conf
 }
