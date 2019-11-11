@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 class Footer extends Component {
     constructor(props) {
         super(props)
-        this.state= {classes: this.props.classes}
+        this.state = { classes: this.props.classes }
     }
     render() {
         return (
             <footer style={this.state.classes.main}>
-                LAYOUT COMPONENT: header
+                <div>
+                    <h1>APP FOOTER</h1>
+                </div>
             </footer>
         )
     }

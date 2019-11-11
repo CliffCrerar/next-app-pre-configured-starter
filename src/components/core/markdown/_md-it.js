@@ -9,7 +9,7 @@ import markdown from 'markdown-it';
 import attrs from 'markdown-it-attrs';
 import options from './_md-opts';
 
-const getMarkDownIt = (config) =>{
+const getMarkDownIt = (config) => {
         console.log('MD props: ', config);
         const {markDownItOptions,lintAttributeOptions} = options(config);
         return new markdown(markDownItOptions)
