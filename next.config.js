@@ -5,7 +5,8 @@
 require('./src/config').configureNodePath();
 // declare variables call plugins;
 const
-  {configureHost,styles,runTimeStyles} = require('./src/config');
+  runTimeStyles = require('./src/utils/built-in/run-time-styles'),
+  {configureHost,styles} = require('./src/config'),
   withPlugins = require('next-compose-plugins'),
   sourceMaps = require('@zeit/next-source-maps'),
   sass = require('@zeit/next-sass'),
