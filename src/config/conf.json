@@ -1,25 +1,41 @@
 {
     "markdown_config": {
-        "markdown-file-paths":["src/config/defaults/test-markdown-dirs"],
-        "show-api-request-log":false,
-        "use-common-mark":false,
+        "markdown-file-paths": [
+            "src/config/defaults/test-markdown-dirs"
+        ],
+        "show-api-request-log": false,
+        "use-common-mark": false,
         "parse-html": true,
         "all-links": false,
         "close-single-tag": false,
         "break-tag-linebreaks": true,
-        "typographer":true,
-        "link_attributes": [{
-            "use-pattern":false,
-            "pattern":"/^https?:\/\//",
-            "attr": {
-                "target": "_blank",
-                "rel": "noopener",
-                "className":"md-links"
+        "typographer": true,
+        "link_attributes": [
+            {
+                "use-pattern": false,
+                "pattern": "/^https?:\/\//",
+                "attr": {
+                    "target": "_blank",
+                    "rel": "noopener",
+                    "className": "md-links"
+                }
             }
-        }],
-        "page-map":[
-            {"requestedAs":"home-page-markdown","located":"./README.md"}
-        ]
+        ],
+        "page-map": [
+            {
+                "requestedAs": "home-page-markdown",
+                "located": "./README.md"
+            }
+        ],
+        "error-messages": {
+            "use-defaults": true,
+            "custom-messages": {
+                "invPath": "<type custom message for invPath error>",
+                "fileNotExist": "<type custom message for fileNotExist error>",
+                "other": "<type custom message for other error>",
+                "default": "<type custom message for default error>"
+            }
+        }
     },
     "app_config": {
         "displayBodyText": false,
@@ -37,8 +53,8 @@
         ]
     },
     "layout_config": {
-        "general":{
-            "separate-layout-with-hr":true
+        "general": {
+            "separate-layout-with-hr": true
         },
         "nav": {
             "useBrandOrTitle": "brand",
@@ -47,13 +63,13 @@
                 "main": {
                     "display": "flex"
                 },
-                "navbar-left":{
-                    "textAlign":"left"
+                "navbar-left": {
+                    "textAlign": "left"
                 },
-                "navbar-right":{
-                    "flex":1,
-                    "textAlign":"right",
-                    "paddingRight":"20px"
+                "navbar-right": {
+                    "flex": 1,
+                    "textAlign": "right",
+                    "paddingRight": "20px"
                 }
             },
             "links": [
@@ -82,10 +98,10 @@
                     "title": "Testing directories"
                 },
                 {
-                    "href":"page-error",
-                    "label":"Page error",
-                    "as":"page error",
-                    "title":"THIS IS AN ERROR!"
+                    "href": "page-error",
+                    "label": "Page error",
+                    "as": "page error",
+                    "title": "THIS IS AN ERROR!"
                 }
             ]
         },
@@ -111,8 +127,8 @@
             }
         }
     },
-    "dev-config":{
-        "display_App_component_mount":true,
-        "display_App_component_update":true
+    "dev-config": {
+        "display_App_component_mount": true,
+        "display_App_component_update": true
     }
 }

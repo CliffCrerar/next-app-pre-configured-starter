@@ -14,84 +14,80 @@ import path from 'path';
 export default (req, res) => router.call(this, req, res); // pass request to task router
 // Global Variable declarations
 const
+  // declare variables
   filePaths = markdown_config['markdown-file-paths'], // get file paths from config
   showReqLog = markdown_config['show-api-request-log'], // checks the console request log switch
-  pageMap = markdown_config['page-map']; // gets the special mapping configuration
+  pageMap = markdown_config['page-map'], // gets the special mapping configuration
+  // declare functions
+  readDirectory = Dir => fs.readdirSync(path.join(process.cwd(), Dir)), 
+  getFile = FilePath => fs.readFileSync(path.join(process.cwd(),FilePath),'utf8'),
+  createErrorResponse = (status, type, message) => {throw new Error(JSON.stringify({ status, type, message }))};
+// declare universal variable 
 let filePath = null;
-
 /**
  * TASK ROUTER
  */
 function router(req, res) {
   showReqLog && reqLog(req); // switch is in /src/config/conf.json
-  filePath = null;
-  try {
-    readFile.call(this, req.query.file, (status, body) => {
-      res.status(status).send(body);
-    })
-  } catch (err) {
-    console.error('ReadFile Error:', err);
-    console.error('ERROR Message:', err.message);
-    let status;
-    try{
-      status = JSON.parse(err.message).status
-    } catch(err){
-      status = 500;
+  filePath = null; // set global variable to null
+  try { // try and run the readfile function
+    readFile.call(this, req.query.file,  body => res.status(200).send(body));
+  } catch (err) { // if an error occurs by means of createErrorResponse
+    console.error('ERROR Message:', err.message); // show error message in the console
+    console.error('STACK:', err.stack); // shoe error stack in the console
+    let status; // declare status
+    try { // try and read message returned by createErrorResponse (Should always be JSON)
+      status = JSON.parse(err.message).status // convert to json to get status code
+    } catch (err) { // if not a json object (error should be unknown and then must be debugged)
+      status = 500; // set status to internal server error code
     }
-    res.status(status).send(err.message);
+    res.status(status).send(err.message); // send response
   }
 }
-
 /**
- * FIND THE REQUESTED FILE
+ * READFILE: The function the reads the file after the path has been determined
+ */
+function readFile(fileName, callback) {
+  let
+    body = {}; // set body
+  findFile(fileName) !== null // if the file is found
+    ? body = getFile(filePath) // set body if the file is not found 
+    : createErrorResponse(404, 'fileNotExist', `The file '${fileName}' does not exist.`); // create error response
+  callback(body)
+}
+/**
+ * FIND THE REQUESTED FILE:
  */
 function findFile(fileName) {
-  if (checkIfMapped(fileName)) {return filePath}; // check if mapping exists for request query
+  if (checkIfMapped(fileName)) return filePath ; // check if mapping exists for request query
   const file = fileName + '.md'; // append file extension to name
   const paths = filePaths; // assign global paths to local variable
   for (let i = 0; i < paths.length; i++) { // loop through the paths
-    const checkPath = paths[i]; // 
-    try {
-      if (fs.readdirSync(checkPath).includes(file)) {
-        filePath = path.join(checkPath, file);
-        break;
+    const checkPath = paths[i]; // set path for this iteration
+    try { // try and read the directory
+      if (readDirectory(checkPath).includes(file)) { // if the read directory contains the file
+        filePath = path.join(checkPath, file); // set the global filepath variable
+        break; // stop the loop if the file is found
       }
-    } catch (error) {
-      createErrorResponse(404, 'invPath',`The path '${checkPath}' does not exist.`);
+    } catch (error) { // if the directory cannot be read
+      createErrorResponse(404, 'invPath', `The path '${checkPath}' does not exist.`); // create error response
     }
   }
-  return filePath;
+  return filePath; // return the filepath
 }
-
+/**
+ * CHECKIFMAPPED: check if a mapping exists for the requested file
+ */
 function checkIfMapped(fileName) {
-  const fileMapping = pageMap.filter(p => p.requestedAs === fileName);
-  console.log('fileMapping: ', fileMapping);
-  if (fileMapping.length > 0) {
-    filePath = fileMapping[0].located;
-    return filePath;
-  } else {
-    return null;
+  const fileMapping = pageMap.filter(p => p.requestedAs === fileName); // try and find a mapping
+  if (fileMapping.length > 0) { // if mapping exists
+    filePath = fileMapping[0].located; // get the location per the mapping
+    return filePath; // return the file path per the mapping
+  } else { // if no mapping exists
+    return null; // return null
   }
 }
 
-function readFile(fileName, callback) {
-  // console.log('fileName: ', fileName);
-  let
-    status = 520,
-    body = {};
-  if (findFile(fileName) !== null) {
-    status = 200;
-    body = fs.readFileSync(filePath)
-    console.log('File exists');
-  } else {
-    status = 404
-    console.log('File not found');
-    createErrorResponse(404, 'fileNotExist',`The file '${fileName}' does not exist.`)
-  }
-  callback(status, body)
-}
 
-function createErrorResponse(status, type, message){
-  const errorResponse = {status,type,message}
-  throw new Error(JSON.stringify(errorResponse));
-}
+
+

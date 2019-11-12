@@ -2,10 +2,11 @@
  * Next.js Config file
  */
 // Setup node path
-require('./src/config').nodePath();
+require('./src/config').configureNodePath();
 // declare variables call plugins;
 const
-  {configureHost,styles} = require('./src/config');
+  runTimeStyles = require('./src/utils/built-in/run-time-styles'),
+  {configureHost,styles} = require('./src/config'),
   withPlugins = require('next-compose-plugins'),
   sourceMaps = require('@zeit/next-source-maps'),
   sass = require('@zeit/next-sass'),
@@ -21,7 +22,7 @@ console.log('|------------------------------------------------|');
 
 /*------------------BUILD CONFIGURATION-----------------------------*/
 dotenv.config(); // initialize .env file
-require('./src/utils/built-in/run-time-styles')(styles);
+runTimeStyles(styles);
 /*------------------BUILD CONFIGURATION-----------------------------*/
 
 module.exports = withPlugins(plugins, {
