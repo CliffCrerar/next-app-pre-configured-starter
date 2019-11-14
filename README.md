@@ -1,9 +1,9 @@
 # Next.js website starter
 
-> THIS PROJECT IS ALPHA STAGE 
+### THIS PROJECT IS ALPHA STAGE 
 
 > # ***Project is on hold***
-> config and markdown implementation failed, new strategy is required.
+> #### config and markdown implementation failed, new strategy is required.
 
 ## Starter template for next.js pre-configured with:
 
