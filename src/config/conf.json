@@ -10,23 +10,19 @@
         "close-single-tag": false,
         "break-tag-linebreaks": true,
         "typographer": true,
-        "link_attributes": [
-            {
-                "use-pattern": false,
-                "pattern": "/^https?:\/\//",
-                "attr": {
-                    "target": "_blank",
-                    "rel": "noopener",
-                    "className": "md-links"
-                }
+        "link_attributes": [{
+            "use-pattern": false,
+            "pattern": "/^https?:\/\//",
+            "attr": {
+                "target": "_blank",
+                "rel": "noopener",
+                "className": "md-links"
             }
-        ],
-        "page-map": [
-            {
-                "requestedAs": "home-page-markdown",
-                "located": "./README.md"
-            }
-        ],
+        }],
+        "page-map": [{
+            "requestedAs": "home-page-markdown",
+            "located": "README.md"
+        }],
         "error-messages": {
             "use-defaults": true,
             "custom-messages": {
@@ -72,8 +68,7 @@
                     "paddingRight": "20px"
                 }
             },
-            "links": [
-                {
+            "links": [{
                     "href": "/",
                     "label": "Home",
                     "as": "home",
