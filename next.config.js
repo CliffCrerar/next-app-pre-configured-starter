@@ -40,15 +40,19 @@ module.exports = withPlugins(plugins, {
             DEBUG: mode,
             ORIGIN_URL: configureHost()
 		});
+		const copyPlugin = new webpack.copyPlugin([
+			{src:"./README.md", dest:"public/markdown/README.md"}
+		])
 		// globalGently  = new webpack.DefinePlugin({ 'global.GENTLY': false });
 		config.node = { fs: 'empty' };
-		// config.plugins.push(globalGently);
+		!mode && config.plugins.push(copyPlugin);
         config.plugins.push(env)
         return modifyConfig(config);
     }
 });
 
 function modifyConfig(conf) {
-    // console.log('conf: ', conf);
+	// console.log('conf: ', conf);
+	
     return conf
 }
