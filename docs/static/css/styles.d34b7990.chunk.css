@@ -1,0 +1,130 @@
+
+
+main .display-error {
+  border-left: 2px solid maroon;
+  background: #f8a7a7;
+  padding: 2vw; }
+  main .display-error h1, main .display-error h2, main .display-error h3, main .display-error h4, main .display-error h5, main .display-error p, main .display-error a, main .display-error li {
+    color: maroon; }
+  main .display-error p {
+    margin: 2vh 0; }
+
+
+/*
+    GLOBAL STYLES
+    INFO: Write all global styles in this file
+*/
+:before,
+:after,
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #FAFAFA; }
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: auto;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden; }
+  html #__next,
+  body #__next {
+    min-height: 100vh;
+    min-width: 100vw; }
+    html #__next nav,
+    body #__next nav {
+      align-items: center;
+      padding: 0 10px; }
+      html #__next nav ul,
+      body #__next nav ul {
+        list-style: none;
+        display: flex; }
+        html #__next nav ul li,
+        body #__next nav ul li {
+          padding-left: 1vw; }
+    html #__next hgroup div,
+    body #__next hgroup div {
+      position: relative; }
+      html #__next hgroup div h1,
+      body #__next hgroup div h1 {
+        margin: 0;
+        padding: 1em 0 10px 0;
+        font-size: 3rem; }
+      html #__next hgroup div h2,
+      body #__next hgroup div h2 {
+        margin: 0;
+        padding-bottom: 1em;
+        font-size: 2rem; }
+    html #__next main,
+    body #__next main {
+      width: 100%;
+      min-height: 100vh; }
+      html #__next main section,
+      body #__next main section {
+        display: block;
+        max-width: 600px;
+        margin: auto !important;
+        height: auto;
+        margin: 5vh 0; }
+    html #__next footer,
+    body #__next footer {
+      height: 100px;
+      position: relative;
+      bottom: 0; }
+      html #__next footer div,
+      body #__next footer div {
+        text-align: center; }
+        html #__next footer div h1,
+        body #__next footer div h1 {
+          padding: 50px; }
+
+nav a {
+  text-decoration: none;
+  color: inherit; }
+
+nav a:hover {
+  color: blueviolet; }
+
+.md-links {
+  font-size: 3em; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Kanit; }
+
+a,
+p,
+div {
+  font-family: lato;
+  margin: 0; }
+
+hr {
+  border: 0.5px solid rgba(0, 0, 0, 0.082);
+  position: relative;
+  padding: 0 20px; }
+
+blockquote {
+  padding: 20px 20px 20px 30px;
+  border-left: 2px solid #505050;
+  background: #c9c9c9;
+  color: rgba(0, 0, 0, 0.9);
+  margin: 4vh 0; }
+  blockquote h1,
+  blockquote h2,
+  blockquote h3,
+  blockquote h4,
+  blockquote h5,
+  blockquote h6,
+  blockquote p,
+  blockquote a {
+    margin: 0; }
+
+
+/*# sourceMappingURL=styles.d34b7990.chunk.css.map*/

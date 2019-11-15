@@ -21,7 +21,7 @@ const
 		[sourceMaps]
 	],
 	target = mode ? 'server' : 'serverless',
-	distDir = mode ? '.next' : 'dist',
+	distDir = mode ? '.next' : 'docs',
 	fs = require('fs');
 
 console.log('|------------------------------------------------|');

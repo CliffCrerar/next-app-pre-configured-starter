@@ -1,0 +1,1 @@
+{"code":"(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{XcKQ:function(n,e,t){(window.__NEXT_P=window.__NEXT_P||[]).push([\"/page-2\",function(){return t(\"p5nM\")}])},p5nM:function(n,e,t){\"use strict\";t.r(e);var u=t(\"q1tI\"),c=t.n(u),o=t(\"/MhD\"),i=c.a.createElement;e.default=function(n){return i(\"section\",null,i(o.a,null,\"page-2\"))}}},[[\"XcKQ\",1,0]]]);"}
