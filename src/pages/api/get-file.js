@@ -18,10 +18,15 @@ const
 	mode = process.env.NODE_ENV === 'development',
 	showReqLog = markdown_config['show-api-request-log'], // checks the console request log switch
 	// declare functions
-	rp = (dir) => require('path').resolve(process.cwd(), dir),
-	mdFiles = mode ? rp('public/markdown') : rp('markdown'),
+	
+	// mdFiles = mode ? './public/markdown/' : './markdown/',
 	// readDirectory = Dir => fs.readdirSync(path.resolve(mdFiles, Dir)),
-	getFile = (file, filePath = mdFiles) => fs.readFileSync(path.resolve(filePath, file), 'utf8'),
+	mdFiles = './public/markdown/',
+	getFile = (file, filePath = mdFiles) => {
+		var fp=filePath+file;
+		console.log('fp: ', fp);
+		return fs.readFileSync(fp, 'utf8')
+},
 	createErrorResponse = (status, type, message) => { throw new Error(JSON.stringify({ status, type, message })) };
 // declare universal variable
 // let filePath = null;
@@ -30,6 +35,8 @@ const
  */
 function router(req, res) {
 	console.log('API Received request');
+	showReqLog && console.log('PROCESS CWD: ', process.cwd());
+	showReqLog && console.log('THIS DIR: ', __dirname);
 	showReqLog && console.log('READING DIR: ', mdFiles);
 	showReqLog && reqLog(req); // switch is in /src/config/conf.json
 	// filePath = null; // set global variable to null
@@ -61,11 +68,11 @@ function readFile(fileName, callback) {
 	//     }
 	//     callback(body)
 	try {
-		if (fileName === 'README') {
-			callback(getFile(fileName + '.md', process.cwd()))
-		} else {
+		// if (fileName === 'README') {
+			// callback(getFile(fileName + '.md', process.cwd()))
+		// } else {
 			callback(getFile(fileName + '.md'))
-		}
+		// }
 	} catch (err) {
 		createErrorResponse(404, 'fileNotExist', `The file '${fileName}' does not exist.`);
 	}

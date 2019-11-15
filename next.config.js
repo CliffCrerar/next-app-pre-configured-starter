@@ -20,36 +20,35 @@ const
 		[sass],
 		[sourceMaps]
 	],
-	target = mode ? 'server' : 'serverless';
-	
-fs = require('fs');
+	target = mode ? 'server' : 'serverless',
+	distDir = mode ? '.next' : 'dist',
+	fs = require('fs');
 
 console.log('|------------------------------------------------|');
 console.log('|--> MODE: ', mode ? 'Development' : 'Production');
-console.log('|--> TARGET: ', target);						  
+console.log('|--> TARGET: ', target);	
+console.log('|--> DIST DIR:',distDir);
 console.log('|------------------------------------------------|');
 
 /*------------------BUILD CONFIGURATION-----------------------------*/
 dotenv.config(); // initialize .env file
 runTimeStyles(styles);
 createNowFile();
-
+fs.copyFileSync('./README.md','./public/markdown/README.md');
 // mdFilesToPublic(markdown_config['markdown-file-paths']);
 /*------------------BUILD CONFIGURATION-----------------------------*/
 
 module.exports = withPlugins(plugins, {
 	target,
+	distDir,
 	webpack: config => {
 		const env = new webpack.EnvironmentPlugin({
 			DEBUG: mode,
 			ORIGIN_URL: configureHost()
 		});
-		const copyPlugin = new (require('webpack-copy-plugin'))([
-			{ src: "./README.md", dest: "public/markdown/README.md" }
-		])
 		// globalGently  = new webpack.DefinePlugin({ 'global.GENTLY': false });
 		config.node = { fs: 'empty' };
-		!mode && config.plugins.push(copyPlugin);
+		// !mode && config.plugins.push(copyPlugin);
 		config.plugins.push(env)
 		return modifyConfig(config);
 	}
