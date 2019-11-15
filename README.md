@@ -1,5 +1,7 @@
 # Next.js website starter
 
+> # PROJECT FAILED
+
 ### THIS PROJECT IS ALPHA STAGE 
 
 ## Starter template for next.js pre-configured with:
