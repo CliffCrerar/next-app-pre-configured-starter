@@ -1,4 +1,4 @@
 import Markdown from 'markdown'
 export default (props) => <section>
-    <Markdown>about-page</Markdown>
+    <Markdown>page-2</Markdown>
 </section>

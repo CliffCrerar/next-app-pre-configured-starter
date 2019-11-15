@@ -1,9 +1,8 @@
-
 import Markdown from 'markdown'
-export default (props) => {
+export default () => {
     return (
         <section>
-            <Markdown>test-dirs</Markdown>
+            <Markdown>test-if-no-page</Markdown>
         </section>
     )
 }

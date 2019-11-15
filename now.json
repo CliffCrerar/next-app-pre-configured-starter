@@ -1,3 +1,7 @@
 {
-    "name": "next-app-pre-configured-starter"
+    "name": "next-app-pre-configured-starter",
+    "routes": [
+        { "src": "markdown", "dest": "./src/md-files/*" },
+        { "src": "README", "dest": "./README.md" }
+    ]
 }

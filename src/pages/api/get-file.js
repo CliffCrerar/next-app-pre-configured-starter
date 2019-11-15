@@ -16,13 +16,13 @@ export default (req, res) => router.call(this, req, res); // pass request to tas
 const
 // declare variables
     mode = process.env.NODE_ENV === 'development',
-    filePaths = markdown_config['markdown-file-paths'], // get file paths from config
+    // filePaths = markdown_config['markdown-file-paths'], // get file paths from config
     showReqLog = markdown_config['show-api-request-log'], // checks the console request log switch
-    pageMap = markdown_config['page-map'], // gets the special mapping configuration
+    // pageMap = markdown_config['page-map'], // gets the special mapping configuration
     // declare functions
-    root = process.cwd(),
-    readDirectory = Dir => fs.readdirSync(path.join(root, Dir)),
-    getFile = FilePath => fs.readFileSync(path.join(root, FilePath), 'utf8'),
+    mdFiles = 'public/markdown',
+    readDirectory = Dir => fs.readdirSync(path.join(mdFiles, Dir)),
+    getFile = (file,filePath = mdFiles) => fs.readFileSync(path.join(filePath, file), 'utf8'),
     createErrorResponse = (status, type, message) => { throw new Error(JSON.stringify({ status, type, message })) };
 // declare universal variable
 let filePath = null;
@@ -51,49 +51,58 @@ function router(req, res) {
  * READFILE: The function the reads the file after the path has been determined
  */
 function readFile(fileName, callback) {
-    let
-        body = {}; // set body
-    if (mode) {
-
-
-        if (findFile(fileName) !== null) { // if the file is found
-            body = getFile(filePath) // set body if the file is not found
-        } else { // if file is not found
-            createErrorResponse(404, 'fileNotExist', `The file '${fileName}' does not exist.`); // create error response
-        }
-    } else {
-        getFile(path.join('public/markdown/' + fileName + '.md'));
-    }
-    callback(body)
+// 	console.log('fileName: ', fileName);
+//     let
+//         body = {}; // set body
+//     if (findFile(fileName) !== null) { // if the file is found
+//         body = getFile(filePath) // set body if the file is not found
+//     } else { // if file is not found
+//         createErrorResponse(404, 'fileNotExist', `The file '${fileName}' does not exist.`); // create error response
+//     }
+//     callback(body)
+	try{
+		if(fileName==='README'){
+			callback(getFile(fileName+'.md',process.cwd()))
+		} else {
+			callback(getFile(fileName+'.md'))
+		}
+	} catch(err){
+		createErrorResponse(404, 'fileNotExist', `The file '${fileName}' does not exist.`);
+	}
+		
 }
-/**
- * FIND THE REQUESTED FILE:
- */
-function findFile(fileName) {
-    if (checkIfMapped(fileName) && mode) return filePath; // check if mapping exists for request query
-    const file = fileName + '.md'; // append file extension to name
-    for (let i = 0; i < filePaths.length; i++) { // loop through the paths
-        const checkPath = filePaths[i]; // set path for this iteration
-        try { // try and read the directory
-            if (readDirectory(checkPath).includes(file)) { // if the read directory contains the file
-                filePath = path.join(checkPath, file); // set the global filepath variable
-                break; // stop the loop if the file is found
-            }
-        } catch (error) { // if the directory cannot be read
-            createErrorResponse(404, 'invPath', `The path '${checkPath}' does not exist.`); // create error response
-        }
-    }
-    return filePath; // return the filepath
-}
+// /**
+//  * FIND THE REQUESTED FILE:
+//  */
+// function findFile(fileName) {
+// 	console.log('fileName: ', fileName);
+//     // if (checkIfMapped(fileName) && mode) return filePath; // check if mapping exists for request query
+// 	const file = fileName + '.md'; // append file extension to name
+// 	console.log('file: ', file);
+//     // for (let i = 0; i < filePaths.length; i++) { // loop through the paths
+//     // const checkPath = filePaths[i]; // set path for this iteration
+//     try { // try and read the directory
+//         if (readDirectory(mdFiles).includes(file)) { // if the read directory contains the file
+//             return path.join(mdFiles, file); // return the filepath
+//             // break; // stop the loop if the file is found
+//         } else {
+//             throw new Error(fileName)
+//         }
+//     } catch (error) { // if the directory cannot be read
+//         createErrorResponse(404, 'invPath', `The path '${error.message}' does not exist.`); // create error response
+//     }
+//     // }
+
+// }
 /**
  * CHECKIFMAPPED: check if a mapping exists for the requested file
  */
-function checkIfMapped(fileName) {
-    const fileMapping = pageMap.filter(p => p.requestedAs === fileName); // try and find a mapping
-    if (fileMapping.length > 0) { // if mapping exists
-        filePath = fileMapping[0].located; // get the location per the mapping
-        return filePath; // return the file path per the mapping
-    } else { // if no mapping exists
-        return null; // return null
-    }
-}
+// function checkIfMapped(fileName) {
+//     const fileMapping = pageMap.filter(p => p.requestedAs === fileName); // try and find a mapping
+//     if (fileMapping.length > 0) { // if mapping exists
+//         filePath = fileMapping[0].located; // get the location per the mapping
+//         return filePath; // return the file path per the mapping
+//     } else { // if no mapping exists
+//         return null; // return null
+//     }
+// }

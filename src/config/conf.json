@@ -1,8 +1,5 @@
 {
     "markdown_config": {
-        "markdown-file-paths": [
-            "src/config/defaults/test-markdown-dirs"
-        ],
         "show-api-request-log": false,
         "use-common-mark": false,
         "parse-html": true,
@@ -75,28 +72,36 @@
                     "title": "Home Page"
                 },
                 {
-                    "href": "/about",
-                    "label": "About",
-                    "as": "About",
-                    "title": "About This"
+                    "href": "/page-1",
+                    "label": "Page One",
+                    "as": "page-one",
+                    "title": "Page test",
+                    "subtitle": true,
+                    "subTitleText": "This is a test page"
                 },
                 {
-                    "href": "/contact",
-                    "label": "Contact",
+                    "href": "/page-2",
+                    "label": "Page Two",
+                    "as": "page-Tow",
+                    "title": "Page Two test",
+                    "subtitle": true,
+                    "subTitle": "This is a test page"
+                },
+                {
+                    "href": "/not-found",
+                    "label": "Not found",
                     "as": "contact",
-                    "title": "Contacts Test Page"
-                },
-                {
-                    "href": "/test-dirs",
-                    "label": "Test Directories",
-                    "as": "test-dir",
-                    "title": "Testing directories"
+                    "title": "Not found Test Page",
+                    "subtitle": true,
+                    "subTitle": "When the markdown file does not exist"
                 },
                 {
                     "href": "page-error",
-                    "label": "Page error",
-                    "as": "page error",
-                    "title": "THIS IS AN ERROR!"
+                    "label": "Not implemented",
+                    "as": "page-error",
+                    "title": "THIS IS AN ERROR!",
+                    "subtitle": true,
+                    "subTitle": "When the page is not created in the `pages` folder"
                 }
             ]
         },

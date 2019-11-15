@@ -3,7 +3,7 @@ import Markdown from 'markdown'
 export default (props) => {
     return (
         <section>
-            <Markdown>home-page-markdown</Markdown>
+            <Markdown>README</Markdown>
         </section>
     )
 }
