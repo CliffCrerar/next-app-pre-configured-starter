@@ -16,16 +16,16 @@ export default (req, res) => router.call(this, req, res); // pass request to tas
 const
 // declare variables
     mode = process.env.NODE_ENV === 'development',
-    // filePaths = markdown_config['markdown-file-paths'], // get file paths from config
     showReqLog = markdown_config['show-api-request-log'], // checks the console request log switch
-    // pageMap = markdown_config['page-map'], // gets the special mapping configuration
-    // declare functions
-    mdFiles = 'public/markdown',
-    readDirectory = Dir => fs.readdirSync(path.join(mdFiles, Dir)),
-    getFile = (file,filePath = mdFiles) => fs.readFileSync(path.join(filePath, file), 'utf8'),
+	// declare functions
+	path = require('path'),
+	rp =(dir)=> require('path').resolve(process.cwd(),dir),
+    mdFiles = mode ? rp('public/markdown') : rp('markdown'),
+    // readDirectory = Dir => fs.readdirSync(path.resolve(mdFiles, Dir)),
+    getFile = (file,filePath = mdFiles) => fs.readFileSync(path.resolve(filePath, file), 'utf8'),
     createErrorResponse = (status, type, message) => { throw new Error(JSON.stringify({ status, type, message })) };
 // declare universal variable
-let filePath = null;
+// let filePath = null;
 /**
  * TASK ROUTER
  */
