@@ -5,7 +5,7 @@
 require('./src/utils/built-in/to-config/_node-path')();
 // declare variables call plugins;
 const
-    mdFilesToPublic = require('./src/utils/built-in/md-to-public'),
+// mdFilesToPublic = require('./src/utils/built-in/md-to-public'),
     runTimeStyles = require('./src/utils/built-in/run-time-styles'),
     { configureHost, styles, markdown_config } = require('./src/config'),
     withPlugins = require('next-compose-plugins'),
@@ -27,7 +27,7 @@ console.log('|------------------------------------------------|');
 /*------------------BUILD CONFIGURATION-----------------------------*/
 dotenv.config(); // initialize .env file
 runTimeStyles(styles);
-mdFilesToPublic(markdown_config['markdown-file-paths']);
+// mdFilesToPublic(markdown_config['markdown-file-paths']);
 /*------------------BUILD CONFIGURATION-----------------------------*/
 
 module.exports = withPlugins(plugins, {

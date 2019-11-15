@@ -30,6 +30,7 @@ let filePath = null;
  * TASK ROUTER
  */
 function router(req, res) {
+    console.log('API Received request');
     showReqLog && reqLog(req); // switch is in /src/config/conf.json
     filePath = null; // set global variable to null
     try { // try and run the readfile function
