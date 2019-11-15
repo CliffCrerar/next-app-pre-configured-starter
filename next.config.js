@@ -39,8 +39,10 @@ module.exports = withPlugins(plugins, {
         const env = new webpack.EnvironmentPlugin({
             DEBUG: mode,
             ORIGIN_URL: configureHost()
-        })
-        config.node = { fs: 'empty' };
+		}),
+		globalGently  = new webpack.DefinePlugin({ 'global.GENTLY': false });
+		config.node = { fs: 'empty' };
+		config.plugins.push(globalGently);
         config.plugins.push(env)
         return modifyConfig(config);
     }
