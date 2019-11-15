@@ -30,3 +30,4 @@ yarn-error.log*
 # Custom
 .vscode
 _old-broken-app
+now.json
