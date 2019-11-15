@@ -10,7 +10,13 @@ module.exports = () =>{
 		conf = req('src/config'),
 		appTitle = req('package.json').name;
 		nowJson = JSON.stringify({
-			name: appTitle
+			name: appTitle,
+			builds: [
+				{
+				  src: "package.json",
+				  use: "@now/next"
+				}
+			]
 		});
 		if(fs.existsSync(Path('now.json'))){
 			cp.execSync(`rm ${Path('now.json')}`)

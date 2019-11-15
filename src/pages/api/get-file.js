@@ -14,61 +14,62 @@ import path from 'path';
 export default (req, res) => router.call(this, req, res); // pass request to task router
 // Global Variable declarations
 const
-// declare variables
-    mode = process.env.NODE_ENV === 'development',
-    showReqLog = markdown_config['show-api-request-log'], // checks the console request log switch
+	// declare variables
+	mode = process.env.NODE_ENV === 'development',
+	showReqLog = markdown_config['show-api-request-log'], // checks the console request log switch
 	// declare functions
-	rp =(dir)=> require('path').resolve(process.cwd(),dir),
-    mdFiles = mode ? rp('public/markdown') : rp('markdown'),
-    // readDirectory = Dir => fs.readdirSync(path.resolve(mdFiles, Dir)),
-    getFile = (file,filePath = mdFiles) => fs.readFileSync(path.resolve(filePath, file), 'utf8'),
-    createErrorResponse = (status, type, message) => { throw new Error(JSON.stringify({ status, type, message })) };
+	rp = (dir) => require('path').resolve(process.cwd(), dir),
+	mdFiles = mode ? rp('public/markdown') : rp('markdown'),
+	// readDirectory = Dir => fs.readdirSync(path.resolve(mdFiles, Dir)),
+	getFile = (file, filePath = mdFiles) => fs.readFileSync(path.resolve(filePath, file), 'utf8'),
+	createErrorResponse = (status, type, message) => { throw new Error(JSON.stringify({ status, type, message })) };
 // declare universal variable
 // let filePath = null;
 /**
  * TASK ROUTER
  */
 function router(req, res) {
-    console.log('API Received request');
-    showReqLog && reqLog(req); // switch is in /src/config/conf.json
-    // filePath = null; // set global variable to null
-    try { // try and run the readfile function
-        readFile.call(this, req.query.file, body => res.status(200).send(body));
-    } catch (err) { // if an error occurs by means of createErrorResponse
-        console.error('ERROR Message:', err.message); // show error message in the console
-        console.error('STACK:', err.stack); // shoe error stack in the console
-        let status; // declare status
-        try { // try and read message returned by createErrorResponse (Should always be JSON)
-            status = JSON.parse(err.message).status // convert to json to get status code
-        } catch (err) { // if not a json object (error should be unknown and then must be debugged)
-            status = 500; // set status to internal server error code
-        }
-        res.status(status).send(err.message); // send response
-    }
+	console.log('API Received request');
+	showReqLog && console.log('READING DIR: ', mdFiles);
+	showReqLog && reqLog(req); // switch is in /src/config/conf.json
+	// filePath = null; // set global variable to null
+	try { // try and run the readfile function
+		readFile.call(this, req.query.file, body => res.status(200).send(body));
+	} catch (err) { // if an error occurs by means of createErrorResponse
+		console.error('ERROR Message:', err.message); // show error message in the console
+		console.error('STACK:', err.stack); // shoe error stack in the console
+		let status; // declare status
+		try { // try and read message returned by createErrorResponse (Should always be JSON)
+			status = JSON.parse(err.message).status // convert to json to get status code
+		} catch (err) { // if not a json object (error should be unknown and then must be debugged)
+			status = 500; // set status to internal server error code
+		}
+		res.status(status).send(err.message); // send response
+	}
 }
 /**
  * READFILE: The function the reads the file after the path has been determined
  */
 function readFile(fileName, callback) {
-// 	console.log('fileName: ', fileName);
-//     let
-//         body = {}; // set body
-//     if (findFile(fileName) !== null) { // if the file is found
-//         body = getFile(filePath) // set body if the file is not found
-//     } else { // if file is not found
-//         createErrorResponse(404, 'fileNotExist', `The file '${fileName}' does not exist.`); // create error response
-//     }
-//     callback(body)
-	try{
-		if(fileName==='README'){
-			callback(getFile(fileName+'.md',process.cwd()))
+	// 	console.log('fileName: ', fileName);
+	//     let
+	//         body = {}; // set body
+	//     if (findFile(fileName) !== null) { // if the file is found
+	//         body = getFile(filePath) // set body if the file is not found
+	//     } else { // if file is not found
+	//         createErrorResponse(404, 'fileNotExist', `The file '${fileName}' does not exist.`); // create error response
+	//     }
+	//     callback(body)
+	try {
+		if (fileName === 'README') {
+			callback(getFile(fileName + '.md', process.cwd()))
 		} else {
-			callback(getFile(fileName+'.md'))
+			callback(getFile(fileName + '.md'))
 		}
-	} catch(err){
+	} catch (err) {
 		createErrorResponse(404, 'fileNotExist', `The file '${fileName}' does not exist.`);
 	}
-		
+
 }
 // /**
 //  * FIND THE REQUESTED FILE:

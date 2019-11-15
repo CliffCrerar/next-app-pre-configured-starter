@@ -1,6 +1,6 @@
 {
     "markdown_config": {
-        "show-api-request-log": false,
+        "show-api-request-log": true,
         "use-common-mark": false,
         "parse-html": true,
         "all-links": false,
