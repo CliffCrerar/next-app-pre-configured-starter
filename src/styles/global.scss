@@ -5,7 +5,6 @@
 
 $appMinHeight: 100vh;
 $appMinWidth: 100vw;
-
 :before,
 :after,
 * {
@@ -24,7 +23,6 @@ body {
     min-height: $appMinHeight;
     min-width: $appMinWidth;
     overflow-x: hidden;
-
     #__next {
         nav {
             align-items: center;
@@ -32,26 +30,21 @@ body {
             ul {
                 list-style: none;
                 display: flex;
-
                 li {
                     padding-left: 1vw;
                 }
             }
         }
-
-        header {
+        hgroup {
             text-align: center;
-
             div {
                 position: relative;
-
                 h1 {
                     padding: 1em 0;
                     font-size: 3rem;
                 }
             }
         }
-
         main {
             width: 100%;
             min-height: $appMinHeight;
@@ -63,24 +56,20 @@ body {
                 margin: 5vh 0;
             }
         }
-
         min-height: $appMinHeight;
         min-width: $appMinWidth;
-
         footer {
             height: 100px;
             position: relative;
             bottom: 0;
-            div{
+            div {
                 text-align: center;
-                h1{
+                h1 {
                     padding: 50px;
                 }
             }
-
         }
     }
-
 }
 
 nav a {
@@ -125,7 +114,6 @@ blockquote {
     background: rgb(201, 201, 201);
     color: rgba(0, 0, 0, 0.9);
     margin: 4vh 0;
-
     h1,
     h2,
     h3,

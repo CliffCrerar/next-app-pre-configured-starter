@@ -8,19 +8,36 @@
  */
 import React, { Component } from 'react';
 import './header.scss';
+
+const SubTitle = (subTitle) => {
+	if (subTitle) {
+		return <h2>{subTitle}</h2>
+	} else {
+		return <React.Fragment />
+	}
+}
+
 export default class Header extends Component {
-    constructor(props) {
-        // console.log('HEADER props: ', props);
-        super(props)
-        this.state = { classes: this.props.classes }
-    }
-    render() {
-        return (
-            <header style={this.state.classes.main}>
-                <div>
-                    <h1>{this.props.title}</h1>
-                </div>
-            </header>
-        )
-    }
+	constructor(props) {
+		// console.log('HEADER props: ', props);
+		super(props)
+		this.state = {
+			classes: this.props.classes,
+			title: this.props.titles.title,
+			subTitle: this.props.titles.subTitle,
+		}
+	}
+	render() {
+		
+		return (
+			<hgroup style={this.state.classes.main}>
+				<div>
+					<h1>{this.state.title}</h1>
+				</div>
+				<div>
+				<SubTitle/>
+				</div>
+			</hgroup>
+		)
+	}
 }

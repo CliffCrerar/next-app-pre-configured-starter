@@ -9,16 +9,16 @@ import Footer from 'layout/4_footer';
 import ConditionalHr from 'core/conditional-hr'
 const Layout = (props) => {
     // console.log('LAYOUT props: ', props);
-    const { router, children, nav, header, title, main, footer, error, general } = props;
+    const { router, children, nav, header, titles, main, footer, error, general } = props;
     return (
         <React.Fragment>
-            <Nav {...nav} router={router} title={title} />
+            <Nav {...nav} router={router} title={titles.title} />
             <ConditionalHr {...general}/>
-            <Header  {...header} title={title} />
+            <Header  {...header} titles={titles} />
             <ConditionalHr {...general}/>
             <Main error={error} {...main} Content={() => children} />
             <ConditionalHr {...general}/>
-            <Footer {...footer} title={title} brand={nav.brand}/>
+            <Footer {...footer} title={titles.title} brand={nav.brand}/>
         </React.Fragment>
     )
 }
