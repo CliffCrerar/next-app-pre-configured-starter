@@ -13,7 +13,7 @@ export default class ConditionalHr extends Component {
                 }
             }
         }
-        console.log(this.props);
+        // console.log(this.props);
     }
 
     render(){

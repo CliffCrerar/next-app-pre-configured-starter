@@ -25,7 +25,8 @@ module.exports = function(conf) {
     // Assign Layout config defaults
     function handleLayoutConfig(layoutConf) {
         // console.log('handleLayoutConfig: ', layoutConf);
-        layoutConf.main.classes.errorStackStyle = { display: 'none' }
+		layoutConf.main.classes.errorStackStyle = { display: 'none' }
+		if(!layoutConf.header.classes.main.textAlign) {layoutConf.header.classes.main.textAlign='center'}
     }
     // Assign markdown config defaults
     function handleMarkdownConfig(markdownConf) {

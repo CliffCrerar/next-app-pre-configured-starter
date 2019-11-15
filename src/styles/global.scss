@@ -36,12 +36,17 @@ body {
             }
         }
         hgroup {
-            text-align: center;
             div {
                 position: relative;
                 h1 {
-                    padding: 1em 0;
+                    margin: 0;
+                    padding: 1em 0 10px 0;
                     font-size: 3rem;
+                }
+                h2 {
+                    margin: 0;
+                    padding-bottom: 1em;
+                    font-size: 2rem;
                 }
             }
         }
@@ -92,7 +97,7 @@ h4,
 h5,
 h6 {
     font-family: Kanit;
-    margin: 0;
+    // margin: 0;
 }
 
 a,

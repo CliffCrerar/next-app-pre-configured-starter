@@ -9,11 +9,11 @@
 import React, { Component } from 'react';
 import './header.scss';
 
-const SubTitle = (subTitle) => {
-	if (subTitle) {
-		return <h2>{subTitle}</h2>
+const SubTitle = ({ display }) => {
+	if (display) {
+		return <h2>{display}</h2>
 	} else {
-		return <React.Fragment />
+		return <h2/>
 	}
 }
 
@@ -21,6 +21,7 @@ export default class Header extends Component {
 	constructor(props) {
 		// console.log('HEADER props: ', props);
 		super(props)
+		// console.log('HEADER props: ', props);
 		this.state = {
 			classes: this.props.classes,
 			title: this.props.titles.title,
@@ -28,14 +29,14 @@ export default class Header extends Component {
 		}
 	}
 	render() {
-		
+
 		return (
 			<hgroup style={this.state.classes.main}>
 				<div>
 					<h1>{this.state.title}</h1>
 				</div>
 				<div>
-				<SubTitle/>
+					<SubTitle display={this.state.subTitle} />
 				</div>
 			</hgroup>
 		)

@@ -5,7 +5,6 @@
 const {
     runTimeStyles,
     exportMap,
-    configureHost,
     configDefaults
 } = require('../utils/built-in'),
     conf = require('./conf.json'),
@@ -15,7 +14,6 @@ const {
 
 module.exports = {
     confJSON,
-    configureHost,
     styles,
     markdown_config,
     runTimeStyles,

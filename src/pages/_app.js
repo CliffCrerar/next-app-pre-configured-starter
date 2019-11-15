@@ -14,24 +14,24 @@ class NextApp extends App {
 	// perform automatic static optimization, causing every page in your app to
 	// be server-side rendered.
 	//
-	static async getInitialProps(appContext) {
-		// calls page's `getInitialProps` and fills `appProps.pageProps`
-		const appProps = await App.getInitialProps(appContext);
-		console.log('appProps: ', appProps);
-
-		return { ...appProps }
-	}
+	// static async getInitialProps(appContext) {
+	// calls page's `getInitialProps` and fills `appProps.pageProps`
+	// 	const appProps = await App.getInitialProps(appContext);
+	// console.log('_app appProps: ', appProps);
+	// 	return { ...appProps }
+	// }
 
 	constructor(props) {
 		super(props)
 		// console.log('_app props: ', props);
-
+		// console.log('AppHead: ', <AppHead/>);
 	}
 
 	// WHEN COMPONENT HAS MOUNTED
 	componentDidMount() {
 		this.props.showAppMount && console.log('APP DID MOUNT');
 		this.displayBodyText();
+		this.getScripts();
 		// this.getTitle();
 	}
 
@@ -54,16 +54,19 @@ class NextApp extends App {
 		}
 	}
 
+	getScripts(){
+		// console.log(confJSON.app_config.scripts);
+		confJSON.app_config.scripts.forEach(script=>require('scripts/'+script));
+	}
+
 	// Get the app title from the route and the links in the config file
 	getTitles() {
-		const links = this.props.config.layout_config.nav.links;
-		// console.log('links: ', links);
-		const route = this.props.router.route;
-		// console.log('route: ', route);
-		return {
-			title:links.filter(link => link.href === route)[0].title,
-			subTitle: links.filter(link => link.href === route)[0].subTitle
-		}
+		const
+			links = this.props.config.layout_config.nav.links,
+			route = this.props.router.route,
+			{ title, subTitle, subTitleText } = links.filter(link => link.href === route)[0],
+			sTitle = subTitle ? subTitleText : null
+		return { title, subTitle: sTitle }
 	}
 
 	render() {
@@ -88,7 +91,7 @@ class NextApp extends App {
 			appConf.error = { message: null, stack: null };
 			return <AppComponents />
 		} catch (err) {
-			appConf.titles = {title: "ERROR", subTitle: null};
+			appConf.titles = { title:  "ERROR", subTitle: null };
 			appConf.error = { message: err.message, stack: err.stack };
 			return <AppComponents />
 		}

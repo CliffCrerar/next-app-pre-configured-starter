@@ -37,12 +37,18 @@
             "./src",
             "./src/components",
             "./src/components/core",
+            "./src/utils",
             "./src/utils/built-in",
-            "./src/styles"
+            "./src/styles",
+            "./public"
         ],
         "showLayoutProps": "all",
         "styles": [
             "https://fonts.googleapis.com/css?family=Kanit|Lato&display=swap"
+        ],
+        "scripts": [
+            "test1.js",
+            "test2.js"
         ]
     },
     "layout_config": {
@@ -75,40 +81,43 @@
                     "href": "/page-1",
                     "label": "Page One",
                     "as": "page-one",
-                    "title": "Page test",
-                    "subtitle": true,
-                    "subTitleText": "This is a test page"
+                    "title": "Page test one",
+                    "subTitle": true,
+                    "subTitleText": "This is a test page with a sub title"
                 },
                 {
                     "href": "/page-2",
                     "label": "Page Two",
-                    "as": "page-Tow",
-                    "title": "Page Two test",
-                    "subtitle": true,
-                    "subTitle": "This is a test page"
+                    "as": "page-two",
+                    "title": "Page test two",
+                    "subTitle": true,
+                    "subTitleText": "This is a test page with a sub title"
                 },
                 {
                     "href": "/not-found",
                     "label": "Not found",
                     "as": "contact",
                     "title": "Not found Test Page",
-                    "subtitle": true,
-                    "subTitle": "When the markdown file does not exist"
+                    "subTitle": true,
+                    "subTitleText": "When the markdown file does not exist"
                 },
                 {
                     "href": "page-error",
                     "label": "Not implemented",
                     "as": "page-error",
-                    "title": "THIS IS AN ERROR!",
-                    "subtitle": true,
-                    "subTitle": "When the page is not created in the `pages` folder"
+                    "title": "<This will not display because this page is not implemented>",
+                    "subTitle": true,
+                    "subTitleText": "<This will not display because this page is not implemented>"
                 }
             ]
         },
         "header": {
             "classes": {
                 "main": {
-                    "display": "block"
+                    "display": "block",
+                    "textAlign": "left",
+                    "maxWidth": "600px",
+                    "margin": "auto"
                 }
             }
         },
