@@ -18,7 +18,6 @@ const
     mode = process.env.NODE_ENV === 'development',
     showReqLog = markdown_config['show-api-request-log'], // checks the console request log switch
 	// declare functions
-	path = require('path'),
 	rp =(dir)=> require('path').resolve(process.cwd(),dir),
     mdFiles = mode ? rp('public/markdown') : rp('markdown'),
     // readDirectory = Dir => fs.readdirSync(path.resolve(mdFiles, Dir)),
@@ -32,7 +31,7 @@ const
 function router(req, res) {
     console.log('API Received request');
     showReqLog && reqLog(req); // switch is in /src/config/conf.json
-    filePath = null; // set global variable to null
+    // filePath = null; // set global variable to null
     try { // try and run the readfile function
         readFile.call(this, req.query.file, body => res.status(200).send(body));
     } catch (err) { // if an error occurs by means of createErrorResponse

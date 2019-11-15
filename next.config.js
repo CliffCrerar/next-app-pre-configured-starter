@@ -40,7 +40,7 @@ module.exports = withPlugins(plugins, {
             DEBUG: mode,
             ORIGIN_URL: configureHost()
 		});
-		const copyPlugin = new webpack.copyPlugin([
+		const copyPlugin = new (require('webpack-copy-plugin'))([
 			{src:"./README.md", dest:"public/markdown/README.md"}
 		])
 		// globalGently  = new webpack.DefinePlugin({ 'global.GENTLY': false });
